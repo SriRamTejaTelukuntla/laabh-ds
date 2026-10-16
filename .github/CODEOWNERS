@@ -1,0 +1,10 @@
+# DS owners must approve changes to the system's rules, docs, tokens and skills.
+# Replace @DS-OWNER with the GitHub usernames of the 1–2 design-system owners.
+/CLAUDE.md          @DS-OWNER
+/.claude/           @DS-OWNER
+/docs/              @DS-OWNER
+/tokens/            @DS-OWNER
+/scripts/           @DS-OWNER
+/CHANGELOG.md       @DS-OWNER
+# Feature folders are owned by whoever works on them; no DS-owner review needed.
+/prds/

@@ -1,0 +1,475 @@
+{
+  "$description": "Effect styles. Mode-aware through bound elevation/* color variables: Light uses soft shadows, Dark uses highlights and blur.",
+  "elevation": {
+    "card": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.card.shadow-1}",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "2px",
+          "spread": "0px"
+        },
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.card.shadow-2}",
+          "offsetX": "0px",
+          "offsetY": "4px",
+          "blur": "16px",
+          "spread": "0px"
+        },
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.card.shadow-3}",
+          "offsetX": "0px",
+          "offsetY": "16px",
+          "blur": "32px",
+          "spread": "0px"
+        },
+        {
+          "type": "inner-shadow",
+          "color": "{elevation.card.highlight-4}",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "1px",
+          "spread": "0px"
+        },
+        {
+          "type": "inner-shadow",
+          "color": "{elevation.card.highlight-5}",
+          "offsetX": "0px",
+          "offsetY": "24px",
+          "blur": "48px",
+          "spread": "0px"
+        }
+      ],
+      "$extensions": {
+        "figma": {
+          "key": "760a328d66ced1f35abae3ea6e3961658c0f6ce4"
+        }
+      }
+    },
+    "overlay": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "type": "background-blur",
+          "blur": "{elevation.overlay.blur}"
+        },
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.overlay.shadow-1}",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "3px",
+          "spread": "0px"
+        },
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.overlay.shadow-2}",
+          "offsetX": "0px",
+          "offsetY": "8px",
+          "blur": "24px",
+          "spread": "0px"
+        },
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.overlay.shadow-3}",
+          "offsetX": "0px",
+          "offsetY": "12px",
+          "blur": "32px",
+          "spread": "0px"
+        },
+        {
+          "type": "inner-shadow",
+          "color": "{elevation.overlay.highlight-4}",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "1px",
+          "spread": "0px"
+        }
+      ],
+      "$extensions": {
+        "figma": {
+          "key": "29bef9ad3692f8e371073cb7cc5d807c8c6b124a"
+        }
+      }
+    },
+    "control": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.control.shadow-1}",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "2px",
+          "spread": "0px"
+        },
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.control.shadow-2}",
+          "offsetX": "0px",
+          "offsetY": "2px",
+          "blur": "6px",
+          "spread": "0px"
+        },
+        {
+          "type": "inner-shadow",
+          "color": "{elevation.control.highlight-3}",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "1px",
+          "spread": "0px"
+        }
+      ],
+      "$extensions": {
+        "figma": {
+          "key": "12e17fafb5612982376ce16b0c5a8a59782a4232"
+        }
+      }
+    },
+    "nav": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "type": "background-blur",
+          "blur": "{elevation.nav.blur}"
+        },
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.nav.shadow-1}",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "3px",
+          "spread": "0px"
+        },
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.nav.shadow-2}",
+          "offsetX": "0px",
+          "offsetY": "8px",
+          "blur": "24px",
+          "spread": "0px"
+        },
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.nav.shadow-3}",
+          "offsetX": "0px",
+          "offsetY": "12px",
+          "blur": "32px",
+          "spread": "0px"
+        },
+        {
+          "type": "inner-shadow",
+          "color": "{elevation.nav.highlight-4}",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "1px",
+          "spread": "0px"
+        }
+      ],
+      "$extensions": {
+        "figma": {
+          "key": "d8c93fdbb1e177a92c611a13a69e2a50b73cae26"
+        }
+      }
+    },
+    "thumb": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.thumb.shadow-1}",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "2px",
+          "spread": "0px"
+        },
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.thumb.shadow-2}",
+          "offsetX": "0px",
+          "offsetY": "2px",
+          "blur": "6px",
+          "spread": "0px"
+        },
+        {
+          "type": "inner-shadow",
+          "color": "{elevation.thumb.highlight-3}",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "1px",
+          "spread": "0px"
+        }
+      ],
+      "$extensions": {
+        "figma": {
+          "key": "cf9ecf4d515d5e756b820bdd044b1c7b29192d77"
+        }
+      }
+    },
+    "card-brand": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.card-brand.shadow-1}",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "2px",
+          "spread": "0px"
+        },
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.card-brand.shadow-2}",
+          "offsetX": "0px",
+          "offsetY": "4px",
+          "blur": "16px",
+          "spread": "0px"
+        },
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.card-brand.shadow-3}",
+          "offsetX": "0px",
+          "offsetY": "16px",
+          "blur": "32px",
+          "spread": "0px"
+        },
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.card-brand.shadow-4}",
+          "offsetX": "0px",
+          "offsetY": "12px",
+          "blur": "40px",
+          "spread": "0px"
+        },
+        {
+          "type": "inner-shadow",
+          "color": "{elevation.card-brand.highlight-5}",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "1px",
+          "spread": "0px"
+        },
+        {
+          "type": "inner-shadow",
+          "color": "{elevation.card-brand.highlight-6}",
+          "offsetX": "0px",
+          "offsetY": "24px",
+          "blur": "48px",
+          "spread": "0px"
+        }
+      ],
+      "$extensions": {
+        "figma": {
+          "key": "fcc3205a52da024da5cffc560a8fee181856b387"
+        }
+      }
+    },
+    "tile": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "type": "background-blur",
+          "blur": "{elevation.tile.blur}"
+        },
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.tile.shadow-1}",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "2px",
+          "spread": "0px"
+        },
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.tile.shadow-2}",
+          "offsetX": "0px",
+          "offsetY": "2px",
+          "blur": "6px",
+          "spread": "0px"
+        },
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.tile.shadow-3}",
+          "offsetX": "0px",
+          "offsetY": "8px",
+          "blur": "24px",
+          "spread": "0px"
+        },
+        {
+          "type": "inner-shadow",
+          "color": "{elevation.tile.highlight-4}",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "1px",
+          "spread": "0px"
+        }
+      ],
+      "$extensions": {
+        "figma": {
+          "key": "3a2939ec632b3daef14355b51635e414a07370dc"
+        }
+      }
+    },
+    "inset": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "type": "inner-shadow",
+          "color": "{elevation.inset.highlight-1}",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "1px",
+          "spread": "0px"
+        }
+      ],
+      "$extensions": {
+        "figma": {
+          "key": "45046917dd1c1d92e6883b26c0e5ede2a8e21b20"
+        }
+      }
+    },
+    "primary": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.primary.shadow-1}",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "2px",
+          "spread": "0px"
+        },
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.primary.shadow-2}",
+          "offsetX": "0px",
+          "offsetY": "4px",
+          "blur": "12px",
+          "spread": "0px"
+        },
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.primary.shadow-3}",
+          "offsetX": "0px",
+          "offsetY": "6px",
+          "blur": "16px",
+          "spread": "0px"
+        }
+      ],
+      "$extensions": {
+        "figma": {
+          "key": "6ae26ed052f1de721613632e6e4d572bc6814573"
+        }
+      }
+    },
+    "primary-sm": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.primary-sm.shadow-1}",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "2px",
+          "spread": "0px"
+        },
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.primary-sm.shadow-2}",
+          "offsetX": "0px",
+          "offsetY": "2px",
+          "blur": "6px",
+          "spread": "0px"
+        }
+      ],
+      "$extensions": {
+        "figma": {
+          "key": "0411ee90a99eff543a9562f33eb20b61f7471966"
+        }
+      }
+    },
+    "logo": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.logo.shadow-1}",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "2px",
+          "spread": "0px"
+        }
+      ],
+      "$extensions": {
+        "figma": {
+          "key": "135584a91fc73ec05d6b8df846ac586949eb2214"
+        }
+      }
+    },
+    "dock": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "type": "background-blur",
+          "blur": "{elevation.dock.blur}"
+        },
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.dock.shadow-1}",
+          "offsetX": "0px",
+          "offsetY": "-4px",
+          "blur": "16px",
+          "spread": "0px"
+        }
+      ],
+      "$extensions": {
+        "figma": {
+          "key": "559ac61bb6f3bdf55b7e87a4c7db72b75cb2dec1"
+        }
+      }
+    },
+    "sheet": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "type": "background-blur",
+          "blur": "{elevation.sheet.blur}"
+        },
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.sheet.shadow-1}",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "3px",
+          "spread": "0px"
+        },
+        {
+          "type": "drop-shadow",
+          "color": "{elevation.sheet.shadow-2}",
+          "offsetX": "0px",
+          "offsetY": "8px",
+          "blur": "32px",
+          "spread": "0px"
+        },
+        {
+          "type": "inner-shadow",
+          "color": "{elevation.sheet.highlight-3}",
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "1px",
+          "spread": "0px"
+        }
+      ],
+      "$extensions": {
+        "figma": {
+          "key": "c1183463086b2485aed97347da30540965fecade"
+        }
+      }
+    }
+  }
+}

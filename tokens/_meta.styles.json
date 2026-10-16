@@ -1,0 +1,18 @@
+{
+  "kind": "styles",
+  "fileKey": "mmAhXn4vJKlmuThcAMgGss",
+  "exportedAt": "2026-10-16 (synced with Figma after \"Components published\")",
+  "collections": [
+    {
+      "name": "Text styles",
+      "file": "tokens/styles.text.json",
+      "count": 99
+    },
+    {
+      "name": "Effect styles",
+      "file": "tokens/styles.effect.json",
+      "count": 13
+    }
+  ],
+  "fileName": "Laabh — Design System"
+}

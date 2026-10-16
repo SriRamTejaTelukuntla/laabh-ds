@@ -1,0 +1,7 @@
+.DS_Store
+*.local.json
+.claude/settings.local.json
+__pycache__/
+# Large exports and scratch files stay out of git
+*.fig
+scratch/

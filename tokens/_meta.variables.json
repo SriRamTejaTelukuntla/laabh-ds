@@ -1,0 +1,60 @@
+{
+  "kind": "variables",
+  "fileKey": "mmAhXn4vJKlmuThcAMgGss",
+  "exportedAt": "2026-10-16T13:44:06.843Z",
+  "collections": [
+    {
+      "name": "Color Primitives",
+      "file": "tokens/primitives.color.json",
+      "id": "VariableCollectionId:2:2",
+      "key": "6a54a2191a1381de06926ce7fbf437348551bf05",
+      "modes": [
+        "Value 2:0"
+      ],
+      "count": 164
+    },
+    {
+      "name": "Color Tokens",
+      "file": "tokens/semantic.color.json",
+      "id": "VariableCollectionId:2:112",
+      "key": "f10929d83247605f5e490e15a6d3ed57e1ce70ce",
+      "modes": [
+        "Light 2:1",
+        "Dark 2:2"
+      ],
+      "count": 186
+    },
+    {
+      "name": "Typography Primitives",
+      "file": "tokens/primitives.typography.json",
+      "id": "VariableCollectionId:2:234",
+      "key": "00fe2be19c8c4ab791bce372d11b4ef4b13d1e87",
+      "modes": [
+        "Value 2:3"
+      ],
+      "count": 44
+    },
+    {
+      "name": "Spacing & Radius Primitives",
+      "file": "tokens/primitives.spacing-radius.json",
+      "id": "VariableCollectionId:2:261",
+      "key": "30e508c183603bcfc4b39e178c4e98a5466fce30",
+      "modes": [
+        "Value 2:4"
+      ],
+      "count": 37
+    },
+    {
+      "name": "Typography Tokens",
+      "file": "tokens/semantic.typography.json",
+      "id": "VariableCollectionId:2:290",
+      "key": "5102cecaeeef8b6305278786c4ecbf7f26aea9ce",
+      "modes": [
+        "Mobile 2:5",
+        "Tablet 2:6",
+        "Desktop 2:7"
+      ],
+      "count": 28
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "$description": "Typography Primitives (Figma collection VariableCollectionId:2:234, modes: Value)",
+  "font": {
+    "family": {
+      "base": {
+        "$type": "fontFamily",
+        "$value": "Inter"
+      },
+      "numeric": {
+        "$type": "fontFamily",
+        "$value": "Space Grotesk"
+      },
+      "mono": {
+        "$type": "fontFamily",
+        "$value": "JetBrains Mono"
+      }
+    },
+    "weight": {
+      "regular": {
+        "$type": "fontWeight",
+        "$value": "Regular",
+        "$description": "CSS font-weight 400"
+      },
+      "medium": {
+        "$type": "fontWeight",
+        "$value": "Medium",
+        "$description": "CSS font-weight 500"
+      },
+      "semibold": {
+        "$type": "fontWeight",
+        "$value": "Semi Bold",
+        "$description": "CSS font-weight 600"
+      },
+      "bold": {
+        "$type": "fontWeight",
+        "$value": "Bold",
+        "$description": "CSS font-weight 700"
+      }
+    },
+    "size": {
+      "10": {
+        "$type": "dimension",
+        "$value": "10px"
+      },
+      "11": {
+        "$type": "dimension",
+        "$value": "11px"
+      },
+      "12": {
+        "$type": "dimension",
+        "$value": "12px"
+      },
+      "13": {
+        "$type": "dimension",
+        "$value": "13px"
+      },
+      "14": {
+        "$type": "dimension",
+        "$value": "14px"
+      },
+      "15": {
+        "$type": "dimension",
+        "$value": "15px"
+      },
+      "16": {
+        "$type": "dimension",
+        "$value": "16px"
+      },
+      "18": {
+        "$type": "dimension",
+        "$value": "18px"
+      },
+      "20": {
+        "$type": "dimension",
+        "$value": "20px"
+      },
+      "22": {
+        "$type": "dimension",
+        "$value": "22px"
+      },
+      "24": {
+        "$type": "dimension",
+        "$value": "24px"
+      },
+      "26": {
+        "$type": "dimension",
+        "$value": "26px"
+      },
+      "28": {
+        "$type": "dimension",
+        "$value": "28px"
+      },
+      "30": {
+        "$type": "dimension",
+        "$value": "30px"
+      },
+      "32": {
+        "$type": "dimension",
+        "$value": "32px"
+      },
+      "36": {
+        "$type": "dimension",
+        "$value": "36px"
+      },
+      "40": {
+        "$type": "dimension",
+        "$value": "40px"
+      },
+      "44": {
+        "$type": "dimension",
+        "$value": "44px"
+      },
+      "48": {
+        "$type": "dimension",
+        "$value": "48px"
+      }
+    },
+    "line-height": {
+      "14": {
+        "$type": "dimension",
+        "$value": "14px"
+      },
+      "16": {
+        "$type": "dimension",
+        "$value": "16px"
+      },
+      "18": {
+        "$type": "dimension",
+        "$value": "18px"
+      },
+      "20": {
+        "$type": "dimension",
+        "$value": "20px"
+      },
+      "22": {
+        "$type": "dimension",
+        "$value": "22px"
+      },
+      "24": {
+        "$type": "dimension",
+        "$value": "24px"
+      },
+      "26": {
+        "$type": "dimension",
+        "$value": "26px"
+      },
+      "28": {
+        "$type": "dimension",
+        "$value": "28px"
+      },
+      "30": {
+        "$type": "dimension",
+        "$value": "30px"
+      },
+      "32": {
+        "$type": "dimension",
+        "$value": "32px"
+      },
+      "34": {
+        "$type": "dimension",
+        "$value": "34px"
+      },
+      "36": {
+        "$type": "dimension",
+        "$value": "36px"
+      },
+      "38": {
+        "$type": "dimension",
+        "$value": "38px"
+      },
+      "40": {
+        "$type": "dimension",
+        "$value": "40px"
+      },
+      "44": {
+        "$type": "dimension",
+        "$value": "44px"
+      },
+      "48": {
+        "$type": "dimension",
+        "$value": "48px"
+      },
+      "52": {
+        "$type": "dimension",
+        "$value": "52px"
+      },
+      "56": {
+        "$type": "dimension",
+        "$value": "56px"
+      }
+    }
+  }
+}

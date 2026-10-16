@@ -1,0 +1,155 @@
+{
+  "$description": "Spacing & Radius Primitives (Figma collection VariableCollectionId:2:261, modes: Value)",
+  "space": {
+    "0": {
+      "$type": "dimension",
+      "$value": "0px"
+    },
+    "2": {
+      "$type": "dimension",
+      "$value": "2px"
+    },
+    "3": {
+      "$type": "dimension",
+      "$value": "3px"
+    },
+    "4": {
+      "$type": "dimension",
+      "$value": "4px"
+    },
+    "6": {
+      "$type": "dimension",
+      "$value": "6px"
+    },
+    "8": {
+      "$type": "dimension",
+      "$value": "8px"
+    },
+    "10": {
+      "$type": "dimension",
+      "$value": "10px"
+    },
+    "12": {
+      "$type": "dimension",
+      "$value": "12px"
+    },
+    "14": {
+      "$type": "dimension",
+      "$value": "14px"
+    },
+    "16": {
+      "$type": "dimension",
+      "$value": "16px"
+    },
+    "18": {
+      "$type": "dimension",
+      "$value": "18px"
+    },
+    "20": {
+      "$type": "dimension",
+      "$value": "20px"
+    },
+    "22": {
+      "$type": "dimension",
+      "$value": "22px"
+    },
+    "24": {
+      "$type": "dimension",
+      "$value": "24px"
+    },
+    "28": {
+      "$type": "dimension",
+      "$value": "28px"
+    },
+    "32": {
+      "$type": "dimension",
+      "$value": "32px"
+    },
+    "34": {
+      "$type": "dimension",
+      "$value": "34px"
+    },
+    "36": {
+      "$type": "dimension",
+      "$value": "36px"
+    },
+    "40": {
+      "$type": "dimension",
+      "$value": "40px"
+    },
+    "48": {
+      "$type": "dimension",
+      "$value": "48px"
+    },
+    "52": {
+      "$type": "dimension",
+      "$value": "52px"
+    }
+  },
+  "radius": {
+    "0": {
+      "$type": "dimension",
+      "$value": "0px"
+    },
+    "2": {
+      "$type": "dimension",
+      "$value": "2px"
+    },
+    "4": {
+      "$type": "dimension",
+      "$value": "4px"
+    },
+    "6": {
+      "$type": "dimension",
+      "$value": "6px"
+    },
+    "8": {
+      "$type": "dimension",
+      "$value": "8px"
+    },
+    "9": {
+      "$type": "dimension",
+      "$value": "9px"
+    },
+    "10": {
+      "$type": "dimension",
+      "$value": "10px"
+    },
+    "12": {
+      "$type": "dimension",
+      "$value": "12px"
+    },
+    "14": {
+      "$type": "dimension",
+      "$value": "14px"
+    },
+    "16": {
+      "$type": "dimension",
+      "$value": "16px"
+    },
+    "18": {
+      "$type": "dimension",
+      "$value": "18px"
+    },
+    "20": {
+      "$type": "dimension",
+      "$value": "20px"
+    },
+    "24": {
+      "$type": "dimension",
+      "$value": "24px"
+    },
+    "28": {
+      "$type": "dimension",
+      "$value": "28px"
+    },
+    "40": {
+      "$type": "dimension",
+      "$value": "40px"
+    },
+    "full": {
+      "$type": "dimension",
+      "$value": "999px"
+    }
+  }
+}
