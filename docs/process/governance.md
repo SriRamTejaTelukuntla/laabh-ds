@@ -9,6 +9,7 @@
 ## Git flow (Claude does the git part)
 - `main` is protected: changes arrive by Pull Request with one DS-owner approval.
 - Designers run `/share-changes`: Claude creates a branch, commits, pushes and opens the PR with a plain-language summary.
+- Branch names, commit messages and PR titles follow [git conventions](git-conventions.md). PRs are squash-merged.
 - `prds/` changes don't need DS-owner review, but still go through `/share-changes` so others get them.
 
 ## Versioning
