@@ -1,7 +1,7 @@
 // Fingerprint the DS file so drift against the repo can be found cheaply.
 // Run in the DS file (use_figma or figma_execute). Compare the result with
-// `python3 scripts/fingerprint.py` (same hashes computed from tokens/ and docs/index.md).
-// Returns { file, variables: {collection: {modes, count, groups: {group: [count, hash]}}},
+// `python3 scripts/fingerprint.py` (same hashes computed from tokens/ and the docs/components AUTO blocks).
+// Returns { exportedAt, file, variables: {collection: {modes, count, groups: {group: [count, hash]}}},
 //           text: {role: hash}, effects: {name: hash}, components: [[name, key, variants, propsHash, pageName]] }
 
 const hash = (s) => { let h = 0; for (const ch of s) h = (Math.imul(h, 31) + ch.codePointAt(0)) >>> 0; return h.toString(16); };
@@ -70,4 +70,4 @@ for (const p of figma.root.children) {
     components.push([n.name, n.key, n.type === 'COMPONENT_SET' ? n.children.length : 1, hash(sig), p.name.replace(/^\s*↳\s*/, ''), n.id]);
   }
 }
-return { file: figma.root.name, pages: figma.root.children.map((p) => p.name.trim()), variables, text, effects, components };
+return { exportedAt: new Date().toISOString(), file: figma.root.name, pages: figma.root.children.map((p) => p.name.trim()), variables, text, effects, components };

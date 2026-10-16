@@ -17,5 +17,5 @@ Format: [W3C DTCG](https://tr.designtokens.org/format/) (legacy dialect: hex str
 References look like `{blue.400}` and resolve across files. Figma's slash names map to dots (`surface/brand` → `surface.brand`).
 
 **How it's produced:** `scripts/figma/export-variables.js` and `export-styles.js` run inside the DS file (via `use_figma` or
-`figma_execute`). Their JSON result is written by `python3 scripts/write-tokens.py <result.json>`, which fails if any count
-differs from Figma. (Don't use figma-console's `figma_export_tokens`: in Oct 2026 it read a stale cache and dropped variables.)
+`figma_execute`). `python3 scripts/figma-result.py <exportedAt> <result.json>` saves their result from the session transcript,
+then `python3 scripts/write-tokens.py <result.json>` writes it and fails if any count differs from Figma. `/ds-sync` runs the whole flow. (Don't use figma-console's `figma_export_tokens`: in Oct 2026 it read a stale cache and dropped variables.)

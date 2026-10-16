@@ -33,6 +33,9 @@ iOS chrome placed on every full screen so layouts account for the real safe area
   - Battery End — fill icon/primary
   - Fill — radius 2 · fill icon/primary
 - Wifi — fill icon/primary
+  - Wifi-path — fill icon/primary
+  - Wifi-path — fill icon/primary
+  - Wifi-path — fill icon/primary
 - Icon / Mobile Signal — fill icon/primary
 
 **Colour tokens across all variants:** `icon/primary` `text/primary`

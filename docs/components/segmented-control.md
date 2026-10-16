@@ -73,6 +73,6 @@ Switch between 2–3 mutually exclusive views of the same content, in place.
 
 **Colour tokens across all variants:** `glass/edge` `glass/thumb` `glass/track` `icon/primary` `icon/secondary` `text/primary` `text/secondary`
 **Text styles:** `body-sm/Medium` · **Effects:** `elevation/thumb`
+<!-- AUTO:END -->
 
 Other bars: `Segmented Control/Neutral/sm` `23:127` · `Segmented Control/Brand/md` `23:147` · `Segmented Control/Brand/sm` `23:167`
-<!-- AUTO:END -->

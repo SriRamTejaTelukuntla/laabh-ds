@@ -4,6 +4,8 @@
 //   md      = markdown to paste between <!-- AUTO:START --> and <!-- AUTO:END -->
 //   docText = the text written on the component page's Reference/Patterns frames (to compare, not to trust)
 //   raw     = count of unbound fills/strokes and unstyled text across all variants (should be 0)
+// plus $exportedAt (a marker for scripts/figma-result.py). Write the blocks with scripts/write-component-docs.py;
+// `python3 scripts/write-component-docs.py --groups` prints the GROUPS line for every documented component.
 const GROUPS = { alert: ['55:92'] };
 
 const vars = await figma.variables.getLocalVariablesAsync();
@@ -95,7 +97,8 @@ for (const id of IDS) {
   }
 
   out.push('**Anatomy (default variant):** ' + (facts(def) || '—'), '');
-  out.push(...(await anatomy(def)), '');
+  const parts = await anatomy(def);
+  if (parts.length) out.push(...parts, '');
 
   const colors = new Set(), texts = new Set(), effects = new Set();
   for (const v of variants) {
@@ -130,6 +133,6 @@ for (const page of docPages) {
 return { md: out.join('\n'), docText, raw };
 }
 
-const result = {};
+const result = { $exportedAt: new Date().toISOString() };
 for (const [name, ids] of Object.entries(GROUPS)) result[name] = await inspect(ids);
 return result;
