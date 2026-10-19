@@ -19,7 +19,7 @@ const CONTAINER_TAPS = ['Option Card', 'Switch Row', 'Dropdown Item', 'Dropdown'
 const CONTROLS = ['TextField', 'TextField/Search', 'TextField/Amount', 'TextArea', 'Dropdown', 'OTP Cell', 'Checkbox', 'Radio', 'Switch'];
 // DS component names: a plain frame with one of these names is a lookalike. Keep in step with docs/index.md.
 const DS_NAMES = ['Alert', 'App Header', 'Avatar', 'Badge', 'Bottom Sheet', 'Sheet Scrim', 'Button', 'Icon Button', 'Compact Button',
-  'Checkbox', 'Checkbox Group', 'Dropdown', 'Dropdown Item', 'Dropdown Menu', 'Option Card', 'OTP Input', 'OTP Cell', 'Radio', 'Radio Group',
+  'Checkbox', 'Checkbox Group', 'Dropdown', 'Dropdown Item', 'Dropdown Menu', 'Icon', 'Option Card', 'OTP Input', 'OTP Cell', 'Radio', 'Radio Group',
   'Screen Atmosphere', 'Segment', 'Segmented Control', 'Step', 'Step Indicator', 'Switch', 'Switch Row', 'Status Bar', 'Home Indicator',
   'Tab Item', 'Tab Bar', 'TextArea', 'TextField', 'Timeline', 'Timeline Item', 'Tooltip', 'Top Bar'];
 // Known exemptions (docs/components/*.md "Figma doc drift").

@@ -15,7 +15,7 @@ Read this file fully. Then load only the docs your task needs (see "Where to loo
 | Default canvas | **390×844** (iPhone 16e/17e, the smallest current iPhone). Check dense screens at 375×667 (SE) |
 | Modes | Color Tokens: `Light` / `Dark`. Typography Tokens: `Mobile` / `Tablet` / `Desktop` |
 | Fonts | Inter (UI), Space Grotesk (numbers `num-*`, and titles `display-md/xl/Semibold`), JetBrains Mono (docs only) |
-| Icons | Lucide, components named `icon/<lucide-name>`, 24px, 2px stroke |
+| Icons | Lucide glyphs `icon/<lucide-name>` (24px, 2px stroke), placed through the `Icon` wrapper (`Size` 10–32, swap `Glyph`) |
 | Accessibility bar | WCAG 2.2 AA + house rules (`docs/ux/accessibility.md`) |
 | Platforms | iOS + Android (web not in scope yet). Decisions that shape the rules: `docs/ux/decisions.md` |
 
