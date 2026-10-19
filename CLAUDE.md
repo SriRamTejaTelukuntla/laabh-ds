@@ -1,6 +1,6 @@
 # Laabh DS: agent guide
 
-This repo is the **written half of the Prasad Glass design system** used by the Laabh app.
+This repo is the **written half of the Laabh design system**.
 Figma holds the values (variables, styles, components). This repo holds how to use them:
 rules, component docs, patterns, the token export, and the skills that turn PRDs into Figma screens.
 
