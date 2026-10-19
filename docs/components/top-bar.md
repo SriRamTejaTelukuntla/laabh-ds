@@ -5,14 +5,15 @@
 The header for onboarding, KYC and other step-by-step flows: back, step caption, title, help, and a stage bar.
 
 ## Use it for
-- Every screen of a multi-step flow. `Progress=On` while in the flow; `Progress=Off` on result screens (Submitted, Activated).
+- Every screen of a multi-step flow. `Progress=On` with `Stage` while in the flow; `Progress=Off` on result screens (Submitted, Activated).
 
 ## Don't use it for
 - Main app tabs and their detail screens → App Header.
 
 ## Rules
 - No fill: it sits on the page atmosphere directly under the Status Bar.
-- Keep the step caption and the stage bar in sync ("Step 2 of 5 · Identity" = stage 2 Current).
+- Set `Stage` to the current stage (1–5): earlier stages show Completed, later ones Upcoming. No nested overrides.
+- Keep the `Step` caption in sync with it ("Step 2 of 5 · Identity" = `Stage=2`). The caption is text, so it doesn't follow `Stage` by itself.
 - KYC uses **5 stages**: Contact · Identity · Profile · Bank · Review.
 - Leading = back (`icon/arrow-left`), trailing = help (`icon/circle-help`); both Ghost Neutral Icon Buttons (md 40). Hide trailing with `Show trailing` when there's no help.
 - 393 wide in the library. On a 390 canvas set it to Fill container.
@@ -30,7 +31,7 @@ The header for onboarding, KYC and other step-by-step flows: back, step caption,
 |---|---|
 | Node ID | `51:43` (page `49:7`) |
 | Key | `62be1b1e192159c77b9853dec8d1cfb8f635a49c` |
-| Variants | 2 · default: `Progress=On` |
+| Variants | 6 · default: `Progress=On, Stage=1` |
 | Default size | 393×67 |
 
 | Property | Type | Values / default |
@@ -40,6 +41,7 @@ The header for onboarding, KYC and other step-by-step flows: back, step caption,
 | Show step | boolean | true |
 | Show trailing | boolean | true |
 | Progress | variant | On, Off (default On) |
+| Stage | variant | 1, 2, 3, 4, 5 (default 1) |
 
 **Anatomy (default variant):** pad space/4 space/0 space/12 space/0 · gap space/8
 
