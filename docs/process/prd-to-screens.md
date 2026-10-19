@@ -6,7 +6,7 @@ and the review rulebooks in `docs/ux/` at the checkpoints.
 
 ## 0 · Setup
 - Run `/get-latest`. Confirm the product Figma file key in `docs/figma-map.md` and that the Figma plugin is signed in.
-- Create `prds/<feature>/` with `prd.md` (the PRD as given) and `plan.md`.
+- Create `prds/<feature>/` with `prd.md` (the PRD as given) and `plan.md` from [plan-template.md](plan-template.md). Check it with `scripts/plan-check.py`.
 
 ## 1 · Understand (no Figma yet)
 - Read the PRD. List flows, screens, states, data and edge cases. List **questions** where the PRD is unclear.

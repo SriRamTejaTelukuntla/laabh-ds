@@ -85,8 +85,8 @@ Report each check as ✅ or ❌ with the fix, in plain words:
 | Repo up to date | Steps 1–2 above | Whatever step 1 reported |
 
 ## 5 · Where you left off (`<feature>`)
-1. Read `prds/<feature>/plan.md`. Not there? List the folders in `prds/` and ask which one they meant.
-2. Say, in a few lines: screens done / in progress / not started (Status column), the next screen, open questions and gaps still open, and the Figma links.
+1. Read `prds/<feature>/plan.md` and run `python3 scripts/plan-check.py prds/<feature>/plan.md` (status counts, next screen, open questions, last Log line). Not there? List the folders in `prds/` and ask which one they meant.
+2. Say, in a few lines: screens done / in progress / not started, the next screen, screens waiting for an OK, open questions and gaps still open, and the Figma links.
 3. Branch: feature work lives on `prd/<feature>`. If they're on another branch and `prd/<feature>` exists (`git branch --list prd/<feature>`), offer to switch (`git switch prd/<feature>`, clean tree only).
    Check it isn't missing changes from `main` (step 1.4).
 4. Offer the next step: "Continue with `<next screen>`?" (`/prd-to-screens` picks up from `plan.md`).
