@@ -43,7 +43,8 @@ Also not measured: disabled controls and `text/disabled`, text under a scrim or 
 ## 0 · Preflight
 1. Get the target from the link. `fileKey` is the part after `/design/`; the node is `node-id=101-129022` → `101:129022`. No `node-id`? Ask which page or frame.
    One page, section or frame per run is best. Several are fine: `TARGET = ['1:2', '3:4']`.
-2. Which file: the DS file is `mmAhXn4vJKlmuThcAMgGss`; the product file key is in `docs/figma-map.md`. In the product file, styles and variables come from the library, so the
+2. Which file: the DS file is `mmAhXn4vJKlmuThcAMgGss`; each feature has its own file (link in `prds/<feature>/plan.md`, list in `docs/figma-map.md` § Feature files).
+   For a feature file: Scripts can't see pending library updates, so ask: does the file show **Library updates available** (Assets panel)? If yes, have it accepted (Review → Update all) first, or the audit measures the old version. In a feature file, styles and variables come from the library, so the
    report checks their keys against `tokens/` (anything else is "from another library").
 3. Connect:
    - **figma-console** (DS owners): `figma_navigate` with the file URL and `lock: true`. Call `figma_execute` with `fileKey` and `timeout: 30000`.
@@ -72,7 +73,7 @@ In plain words, short:
 - What wasn't checked (exemptions, "to measure by hand", hit areas larger than the component).
 - Link the report file. Then **offer** fixes as a short list ("bind `Title` fill on A06 Dark to `text/primary`") and ask before changing anything.
 
-When fixing (after an OK): product file only, one screen per call, screenshot Light and Dark after, re-run the audit on that frame.
+When fixing (after an OK): the feature's file only, one screen per call, screenshot Light and Dark after, re-run the audit on that frame.
 
 ## Hand-offs from /design-review
 `/design-review` lists "Contrast to measure" pairs and "Raw values" nodes (`docs/ux/ux-governance.md` §9). Run the audit on the frames those come from, then answer

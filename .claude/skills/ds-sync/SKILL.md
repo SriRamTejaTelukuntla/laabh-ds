@@ -102,7 +102,8 @@ return { total: hits.length, hits: hits.slice(0, 20) };
 Tell the person, in plain words:
 - what changed in Figma and which repo files now reflect it;
 - anything you couldn't fix (stale Figma doc frames, NOT IN DOCS components, `raw` counts);
-- a proposed commit message in the git-conventions format, with a `Figma-Version:` footer if a version was saved.
+- a proposed commit message in the git-conventions format, with a `Figma-Version:` footer if a version was saved;
+- after the library is published: every feature file keeps the old version until someone accepts "Library updates available" in it. Name the active ones (`docs/figma-map.md` § Feature files).
 Then ask whether to add a `CHANGELOG.md` entry and whether to share it with `/share-changes`.
 
 ## Gotchas

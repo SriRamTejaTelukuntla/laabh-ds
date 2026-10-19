@@ -24,7 +24,8 @@ It's the judgement half of review. Measured things (contrast, token binding, tap
 
 ## 0 · Preflight
 1. **Target.** From each link: `fileKey` (after `/design/`) and the node (`node-id=101-129198` → `101:129198`). Review **Light and Dark**: if the Dark copies sit in another section, include it.
-   Product screens are in the product file (`docs/figma-map.md`); the DS file's Selected Screens are reference only.
+   Product screens are in each feature's own Figma file (link in `prds/<feature>/plan.md`); the DS file's Selected Screens are reference only.
+   **Library up to date:** Scripts can't see pending library updates, so ask: does the file show **Library updates available** (Assets panel)? If yes, have it accepted (Review → Update all) first: a review on an old library version judges outdated components.
 2. **Connect.** Official Figma plugin: load `figma:figma-use`, then `use_figma`. DS owners with figma-console: `figma_navigate` with `lock: true`, then `figma_execute` with `fileKey` and `timeout: 30000`.
 3. **Feature.** If there's one, read `prds/<feature>/plan.md` (review context, "Rules that apply" per screen, Decisions & waivers) and the older reviews in `prds/<feature>/review.md`.
 
@@ -79,4 +80,4 @@ In plain words, short: the verdict and counts; the `S1`s and `S2`s in one line e
 what was handed to `/ds-audit` and what it measured; the report's path. Then **offer** fixes as a short list and ask before changing anything.
 - `S1`s must be fixed before handoff. An `S2` the team keeps is a **waiver**: record it (date, finding, why, decided by) in `plan.md` "Decisions & waivers", or in `docs/ux/decisions.md` if it's product-wide.
 - A finding seen in 3+ reviews: suggest promoting it to a `TR-*` rule (governance §10).
-- When fixing (after an OK): product file only, one screen per call, Light first then Dark, screenshot both, then re-review just that screen.
+- When fixing (after an OK): the feature's file only, one screen per call, Light first then Dark, screenshot both, then re-review just that screen.
