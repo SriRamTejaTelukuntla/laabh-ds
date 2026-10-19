@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the Prasad Glass design system and this repo.
+All notable changes to the Laabh design system and this repo.
 Versions follow semver: **major** = breaking (renamed/removed component, token or prop), **minor** = new component/token/variant,
 **patch** = fixes and docs. Each Figma library publish uses the same version in its publish note.
 

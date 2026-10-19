@@ -1,7 +1,7 @@
 # Laabh DS
 
 The design system's rulebook, written so that Claude (and new designers) can design Laabh screens in Figma
-that follow Prasad Glass exactly. You give Claude a PRD; it plans the screens, builds them in Figma from
+that follow the system exactly. You give Claude a PRD; it plans the screens, builds them in Figma from
 our components and tokens, in Light and Dark, and checks its own work.
 
 **You never need to write code or use a terminal.**
