@@ -257,16 +257,16 @@ Securities regulators also scrutinise trading-app engagement features.
 
 ## 7. What a good finding looks like
 
-If you can't fill **Where**, **Problem** and **Impact** concretely, delete the finding (`GOV-02`).
+If you can't fill **Where**, **What's wrong** and **Why it matters** concretely, delete the finding (`GOV-02`).
 
-| Field | Content |
+| Field (report label) | Content |
 |---|---|
 | **Where** | Screen/frame name + element (and the Figma node id if available). |
-| **Problem** | What you see, stated as fact. |
-| **Impact** | Who is affected and what goes wrong (mis-tap, misread, abandonment, loss). |
-| **Principle** | One primary ID (`L-*`, `V-*`, `DN-*`, `NH-*`, `SR-*`, `WCAG *`, `A11Y-*`) + optionally one `TR-*`/`M-*`/`X-*`. |
-| **Recommendation** | The smallest fix, using DS components and tokens (`GOV-10`). Name the trade-off if there is one. |
-| **Severity · Confidence** | `S1`–`S4` · High / Medium / Needs research. |
+| **What's wrong** (problem) | What you see, stated as fact. |
+| **Why it matters** (impact) | Who is affected and what goes wrong (mis-tap, misread, abandonment, loss). |
+| **Fix** (recommendation) | The smallest fix, using DS components and tokens (`GOV-10`). Name the trade-off if there is one. |
+| **Rule** (principle) | One primary ID (`L-*`, `V-*`, `DN-*`, `NH-*`, `SR-*`, `WCAG *`, `A11Y-*`) + optionally one `TR-*`/`M-*`/`X-*`. |
+| **How serious · How sure** | `S1`–`S4` as a word (§9) · High / Medium / Needs research. |
 
 ### Worked example: one raised, three rejected
 
@@ -275,13 +275,13 @@ If you can't fill **Where**, **Problem** and **Impact** concretely, delete the f
 
 **Raised:**
 
-> **[S1] Buy/Sell side is shown by colour only** · `DR-01`
+> **DR-01 · Buy or Sell is shown by colour only · 🔴 Must fix (S1)**
 > - **Where:** Order sheet › side Segmented Control and the "Place order" button.
-> - **Problem:** The selected side is shown only by the segment's fill colour. The submit button reads "Place order" for both sides, and its colour is the only cue.
-> - **Impact:** A user with red–green colour-vision deficiency, or one glancing in bright sunlight, can submit the opposite side. That's a wrong order with real money.
-> - **Principle:** `WCAG 1.4.1` · `TR-ORD-01`
-> - **Recommendation:** Label the button with the side ("Buy 10 INFY"), restate the side in the sheet title, keep the segment labels as text. Keep the Success/Danger button tones as a second cue.
-> - **Confidence:** High
+> - **What's wrong:** The selected side is shown only by the segment's fill colour. The submit button reads "Place order" for both sides, and its colour is the only cue.
+> - **Why it matters:** A user with red–green colour-vision deficiency, or one glancing in bright sunlight, can submit the opposite side. That's a wrong order with real money.
+> - **Fix:** Label the button with the side ("Buy 10 INFY"), restate the side in the sheet title, keep the segment labels as text. Keep the Success/Danger button tones as a second cue.
+> - **Rule:** `WCAG 1.4.1` · `TR-ORD-01`
+> - **How sure:** High
 
 **Considered and rejected (so you can see the test working):**
 - *"Watchlist has 20 rows, which breaks Miller's Law."* → Rejected. Rows are scanned, not memorised (`MYTH-2`); tests ② and ③ fail.
@@ -317,40 +317,70 @@ If you can't fill **Where**, **Problem** and **Impact** concretely, delete the f
 
 ## 9. Report template (one report for UX + accessibility)
 
+Written for the whole team, not just reviewers: someone who opens it should know in **ten seconds** whether the design is ready, what's wrong, and who fixes it.
+Plain words first, rule IDs last. Severity is shown as a word and a colour, with the S-level in brackets:
+
+| Level | In the report | Means |
+|---|---|---|
+| `S1` | 🔴 Must fix (S1) | Fix before handoff |
+| `S2` | 🟠 Should fix (S2) | Fix before release, or waive with a reason |
+| `S3` | 🟡 Small fix (S3) | Fix when the screen is next touched |
+| `S4` | ⚪ Polish (S4) | Optional |
+
+| Verdict (§3) | In the report |
+|---|---|
+| Changes required | ❌ Not ready for handoff |
+| Pass with fixes | ⚠️ Ready after fixes |
+| Pass | ✅ Ready for handoff |
+
 ```markdown
 # Design review: <screen / flow>
-**Platform:** iOS + Android · **Segment:** <…> · **Stage:** <in review | final> · **Reviewed:** <date>
-**Task walked:** <one line>
-**Assumptions:** <anything inferred under §2>
-**States reviewed:** <list, Light + Dark> · **Missing states:** <list or "none">
+**Result:** <❌ Not ready for handoff | ⚠️ Ready after fixes | ✅ Ready for handoff>. <one plain sentence: why, and who it's waiting on>
+**Checked:** <which screens, Light + Dark> · <date> · <stage in words: first-screen check | final check before handoff>
+**Open problems:** 🔴 Must fix: <n> · 🟠 Should fix: <n> · 🟡 Small fix: <n> · ⚪ Polish: <n>
 
-## Verdict: <Pass | Pass with fixes | Changes required>
-S1: <n> · S2: <n> · S3: <n> · S4: <n>
+## At a glance
+| # | Problem | Where | How serious | Fix | Who | Status |
+|---|---|---|---|---|---|---|
+| DR-01 | <the problem in plain words> | <screens> | 🔴 Must fix | <the fix in a few words> | <Designer / DS owner / Product> | Open |
 
-## Findings (most severe first)
-### [S1] <short title> · DR-01
-- **Where:**
-- **Problem:**
-- **Impact:**
-- **Principle:** <primary ID> · <supporting ID>
-- **Tag:** UX | WCAG | House | Recommendation
-- **Recommendation:**
-- **Confidence:**
+## What to do next
+1. <the next action, who does it>
 
-## Systemic issues (seen on 3+ screens)
-## Needs annotation   (accessibility.md §8: AN-xx missing)
-## Questions          (decisions the design can't show yet)
-## Considered and cleared (one line each, only for items someone might expect)
-## Hand-offs
-- Contrast to measure → `/ds-audit`: <pairs>
-- Raw values / token binding → `/ds-audit`: <nodes>
-- DS gaps (no component exists) → `/new-component`: <list>
-## Needs research
-- <question> → <what would settle it>
-## What works (max 3, specific)
+## Details
+### DR-01 · <the problem in plain words> · 🔴 Must fix (S1)
+- **Where:** <screen + element (+ node ID); "every screen with X" for a problem on 3+ screens>
+- **What's wrong:** <what you see, as a fact>
+- **Why it matters:** <who is affected and what goes wrong for them>
+- **Fix:** <the smallest fix with DS components and tokens; the trade-off, if any>
+- **Rule:** <primary ID> · <optional supporting ID>
+- **How sure:** <High | Medium | Needs research>
+- **Status:** <Open | Fixed (date)>
+
+## Questions for the team
+- <question> (<who decides>)
+
+## Missing screens or states
+- <state> (<screen>)
+
+## Good things
+- <max 3, specific>
+
+## Checked and fine
+- <one line each, only for items someone might expect, naming the exception>
+
+## Notes for the team
+- **Annotations missing:** <AN-xx on which screen, or "none">
+- **Measured by /ds-audit:** <what, or "to measure: …">
+- **Design-system gaps:** <for /new-component, or "none">
+- **Needs research:** <question → what would settle it, or "none">
+- **About this review:** platform, user segment, task walked, assumptions
 ```
 
-Number findings `DR-01`, `DR-02`… within the report. Don't add a "laws checked" list.
+- Number findings `DR-01`, `DR-02`… most serious first. A problem on 3+ screens is **one** finding whose *Where* lists the screens.
+- **Open problems** counts only findings whose *Status* isn't *Fixed*; the result follows those (§3). Fixed findings stay in the report, marked ✅ in the table.
+- Keep each detail field to one or two sentences. Use the words the team uses, not the law's name. No "laws checked" list.
+- `scripts/review-check.py` checks this format (and still reads older reports).
 
 ---
 

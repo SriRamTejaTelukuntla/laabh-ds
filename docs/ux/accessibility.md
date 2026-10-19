@@ -588,8 +588,8 @@ Tags alongside severity: **WCAG** (fails an SC), **House** (fails a house rule o
 ## 10. Report
 
 Accessibility findings go in the **single** `/design-review` report ([`ux-governance.md`](ux-governance.md) §9), alongside UX findings, with one verdict.
-For accessibility, fill in: the Tag, the `A11Y-*` ID with SC and level (e.g. `A11Y-TGT-03 · 2.5.7 (AA)`), **Needs annotation**, **Questions**,
-**Considered and cleared** (one line each, naming the exception), and the contrast pairs sent to `/ds-audit`.
+For accessibility, fill in: the `A11Y-*` ID with SC and level under **Rule** (e.g. `A11Y-TGT-03 · 2.5.7 (AA)`), **Questions for the team**,
+**Checked and fine** (one line each, naming the exception), and under **Notes for the team**: annotations missing and the contrast pairs sent to `/ds-audit`.
 
 ---
 
