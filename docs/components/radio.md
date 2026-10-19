@@ -14,13 +14,14 @@ Pick exactly one option from a short list of short labels.
 ## Rules
 - Pre-select the safest option when there's a sensible default (Delivery over Intraday).
 - Keep labels parallel and short.
+- In screens set it to **Fill container**: `Label` and `Description` then wrap. The master keeps its narrow default width, so a hugging instance doesn't wrap. `Direction=Vertical` items fill the group; horizontal items hug.
 - Show validation with `Show error` + `Error` text, not by colouring items.
 
 ## Accessibility
 - Row hit area ≥ 44pt; the label is tappable. Focus: 2px `focus/ring`, 2px gap.
 
 ## Figma doc drift
-- none
+- With `Required` on and the component filling the width, the asterisk sits at the end of the label's first line (the label fills the row so it can wrap). Accepted 19 Oct 2026.
 
 <!-- AUTO:START (generated from Figma by scripts/figma/inspect-components.js; do not edit by hand) -->
 ### Radio

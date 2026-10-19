@@ -101,7 +101,7 @@ Two collections: **Color Primitives** (164 raw values, never used directly in sc
 | `text/warning` | `amber/450` #9a6b00 | `amber/250` #f2c14e |
 | `text/accent` | `violet/400` #6e44e8 | `violet/300` #a98bff |
 | `text/disabled` | `neutral/200` #9ea5b3 | `neutral/300` #5e6470 |
-| `text/placeholder` | `neutral/300` #5e6470 | `frost/200` #c7d3ea |
+| `text/placeholder` | `neutral/300` #5e6470 | `frost/400` #9da7ba |
 | `text/neutral` | `navy/500` #0a2e5c | `frost/200` #c7d3ea |
 | `text/brand-strong` | `blue/550` #2b4fd8 | `blue/250` #a9bcff |
 | `text/danger-strong` | `red/500` #a32424 | `red/200` #f5b5b5 |

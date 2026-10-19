@@ -584,7 +584,7 @@
       "$value": "{neutral.300}",
       "$extensions": {
         "modes": {
-          "Dark": "{frost.200}"
+          "Dark": "{frost.400}"
         }
       }
     },

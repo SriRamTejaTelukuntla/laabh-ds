@@ -13,10 +13,12 @@ On/off settings that apply instantly, without a Save button.
 
 ## Rules
 - The label states what is on ("Price alerts"), never a question.
+- In screens set it to **Fill container**: `Label` and `Description` then wrap. The master keeps its narrow default width, so a hugging instance doesn't wrap. Switch Row already wraps.
 - Switch Rows sit inside a card (`surface/card`, `radius/18`, padding 20 horizontally). The last row hides its divider (`Show divider` = false).
 
 ## Accessibility
 - The whole row is the hit target. On/off is shown by thumb position **and** track colour.
+- Disabled: track `surface/disabled`, thumb `surface/neutral-strong` with no shadow (2.75:1 Light, 2.76:1 Dark). A white thumb read as active in Dark. On/off is then shown by thumb position.
 
 ## Figma doc drift
 - none (Reference frame corrected 16 Oct 2026)
@@ -53,7 +55,7 @@ On/off settings that apply instantly, without a Save button.
 - Text — gap space/2
   - Label — text label-md/Regular · fill text/primary
 
-**Colour tokens across all variants:** `focus/ring` `surface/brand` `surface/brand-hover` `surface/disabled` `surface/neutral-emphasis` `surface/neutral-strong-hover` `surface/static-white` `text/disabled` `text/primary` `text/secondary`
+**Colour tokens across all variants:** `focus/ring` `surface/brand` `surface/brand-hover` `surface/disabled` `surface/neutral-emphasis` `surface/neutral-strong` `surface/neutral-strong-hover` `surface/static-white` `text/disabled` `text/primary` `text/secondary`
 **Text styles:** `body-lg/Regular` `body-sm/Regular` `label-md/Regular` · **Effects:** `elevation/thumb`
 
 ### Switch Row
@@ -82,7 +84,7 @@ On/off settings that apply instantly, without a Save button.
   - Switch → `Switch` — gap space/10
 - Divider — fill glass/hairline
 
-**Colour tokens across all variants:** `glass/hairline` `surface/brand` `surface/disabled` `surface/static-white` `text/disabled` `text/primary` `text/secondary`
+**Colour tokens across all variants:** `glass/hairline` `surface/brand` `surface/disabled` `surface/neutral-strong` `surface/static-white` `text/disabled` `text/primary` `text/secondary`
 **Text styles:** `body-lg/Medium` `body-lg/Regular` `body-sm/Regular` `label-md/Regular` · **Effects:** `elevation/thumb`
 
 ### Switch Group
@@ -101,6 +103,6 @@ On/off settings that apply instantly, without a Save button.
 - Switch Row → `Switch Row`
 - Switch Row → `Switch Row`
 
-**Colour tokens across all variants:** `glass/hairline` `surface/brand` `surface/disabled` `surface/static-white` `text/disabled` `text/primary` `text/secondary`
+**Colour tokens across all variants:** `glass/hairline` `surface/brand` `surface/disabled` `surface/neutral-strong` `surface/static-white` `text/disabled` `text/primary` `text/secondary`
 **Text styles:** `body-lg/Medium` `body-lg/Regular` `body-sm/Regular` `label-md/Medium` `label-md/Regular` · **Effects:** `elevation/thumb`
 <!-- AUTO:END -->
