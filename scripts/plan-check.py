@@ -4,7 +4,8 @@ Usage: python3 scripts/plan-check.py prds/<feature>/plan.md
 Prints the status counts, the next screen to work on, open questions, open gaps and waivers, then:
   FAIL  a missing section · a screen ID that isn't <letter><2 digits>[a-z] or is used twice · an unknown status
         · a screen with no components, states or rules that apply
-  WARN  screen IDs with more than one letter · a built screen without a Figma link · no Log entry
+  WARN  screen IDs with more than one letter · a built screen without a Figma link · no feature Figma file once
+        building has started · no Log entry
 Exits 1 if anything FAILs. Used by /prd-to-screens after each update and by /get-latest to say where someone left off.
 """
 import re
@@ -74,6 +75,10 @@ def main(path):
     if not log:
         warns.append("the Log has no entries: add what was done and what's next")
 
+    figma_file = re.search(r"\*\*Figma file:\*\*\s*([^·\n]+)", text)
+    figma_file = figma_file.group(1).strip() if figma_file else ""
+    if "figma.com/" not in figma_file and any(r.get("Status", "").lower().split(" ")[0] in STATUSES[1:6] for r in screens):
+        warns.append("screens are built but the header has no 'Figma file:' link to the feature's own file")
     status = re.search(r"\*\*Status:\*\*\s*([^·\n]+)", text)
     print(f"{Path(path).parent.name}: {status.group(1).strip() if status else 'no status line'} · {len(screens)} screens")
     counts = {s: sum(1 for r in screens if r.get("Status", "").lower().split(" ")[0] == s) for s in STATUSES}
@@ -89,6 +94,7 @@ def main(path):
     blocked = [r.get("ID") for r in screens if st(r) == "blocked"]
     if blocked:
         print(f"  blocked: {', '.join(blocked)} (see the Log)")
+    print(f"  figma file: {figma_file if 'figma.com/' in figma_file else 'not set yet'}")
     print(f"  open questions {len(open_q)} · open gaps {len(open_g)} · decisions & waivers {len(waivers)}")
     if log:
         print(f"  last log: {log[-1].strip()[2:][:120]}")

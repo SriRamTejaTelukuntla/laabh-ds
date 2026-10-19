@@ -1,13 +1,24 @@
 # Figma map
 
-IDs verified Oct 2026. Node IDs are valid **in the DS file only**. In product files, use component/style/variable **keys**.
+IDs verified Oct 2026. Node IDs are valid **in the DS file only**. In feature files, use component/style/variable **keys** (`scripts/build-kit.py`).
 
 ## Files
 
 | File | fileKey | Role |
 |---|---|---|
 | Laabh — Design System | `mmAhXn4vJKlmuThcAMgGss` | Library, published (read-only for product work) |
-| Laabh — Product | _TBD: create, then add the key here_ | Where `/prd-to-screens` builds |
+| Laabh — <Feature> | one file per feature (see below) | Where `/prd-to-screens` builds that feature's screens |
+
+## Feature files
+
+Every feature has its own Figma file, `Laabh — <Feature>`. There's no single product file for the whole app.
+The DS library is published to the whole organisation, so a new file gets it by default (if not, turn it on in Assets → Libraries).
+When the DS publishes an update, each file shows "Library updates available": accept it there before building or reviewing.
+The file's link also goes in the header of `prds/<feature>/plan.md`. `/prd-to-screens` adds the row here.
+
+| Feature | File | fileKey | Plan |
+|---|---|---|---|
+| — | | | |
 
 ## Variable collections
 
