@@ -13,7 +13,7 @@ A field that opens a menu to pick one value from a list.
 - Actions (Delete, Exit) → buttons or a sheet. A selection menu never holds actions.
 
 ## Rules
-- The trigger matches TextField: same sizes (`sm`/`md`/`lg`), same `Outline`/`Filled` styles, same label/helper slots. Use the same size as the other fields in the form.
+- The trigger matches TextField (including the Disabled look): same sizes (`sm`/`md`/`lg`), same `Outline`/`Filled` styles, same label/helper slots. Use the same size as the other fields in the form.
 - `Value` shows the placeholder ("Select") until chosen. The state then becomes `Filled`.
 - Selected item: `Selection=Selected` (check + `text/selected`).
 - `Trailing` on items is for a value (e.g. a price `₹1,386.40` in `num-body-sm`).
@@ -62,7 +62,7 @@ A field that opens a menu to pick one value from a list.
   - Value — text label-lg/Regular · fill text/placeholder
   - Trailing icon → `Icon`
 
-**Colour tokens across all variants:** `border/danger` `border/focus` `border/hover` `border/strong` `border/success` `glass/control` `glass/field` `icon/brand` `icon/disabled` `icon/primary` `icon/secondary` `surface/disabled` `text/danger` `text/disabled` `text/placeholder` `text/primary` `text/secondary` `text/success`
+**Colour tokens across all variants:** `border/danger` `border/default` `border/focus` `border/hover` `border/strong` `border/success` `glass/control` `glass/field` `icon/brand` `icon/disabled` `icon/primary` `icon/secondary` `text/danger` `text/disabled` `text/placeholder` `text/primary` `text/secondary` `text/success`
 **Text styles:** `body-sm/Medium` `body-sm/Regular` `label-lg/Regular` `label-md/Medium` · **Effects:** `elevation/control`
 
 ### Dropdown Item

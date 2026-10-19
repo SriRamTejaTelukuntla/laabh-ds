@@ -17,7 +17,7 @@ One-time-code entry for phone, email, eSign and nominee verification.
 
 ## Accessibility
 - Digits use `num-display-md/Medium`. Error pairs `border/danger` with helper text that says what to do.
-- Cell edges are `border/strong` (3:1 in both modes). The `Disabled message` stays `text/secondary`: it's essential, so never `text/disabled`.
+- Cell edges are `border/strong` (3:1 in both modes). Disabled cells match disabled fields: `glass/control` fill, `border/default` edge, no shadow. The `Disabled message` stays `text/secondary`: it's essential, so never `text/disabled`.
 
 ## Figma doc drift
 - none. The helper row is `Helper` (`body-sm/Regular`) + `Timer` (`num-body-sm/Regular`); Error, Success and Disabled show their own message property (`body-sm/Medium` for Error and Success).
@@ -55,7 +55,7 @@ One-time-code entry for phone, email, eSign and nominee verification.
   - Helper — text body-sm/Regular · fill text/secondary
   - Timer — text num-body-sm/Regular · fill text/secondary
 
-**Colour tokens across all variants:** `border/danger` `border/focus` `border/strong` `border/success` `glass/field` `surface/disabled` `text/danger` `text/disabled` `text/primary` `text/secondary` `text/success`
+**Colour tokens across all variants:** `border/danger` `border/default` `border/focus` `border/strong` `border/success` `glass/control` `glass/field` `text/danger` `text/disabled` `text/primary` `text/secondary` `text/success`
 **Text styles:** `body-sm/Medium` `body-sm/Regular` `num-body-sm/Regular` `num-display-md/Medium` · **Effects:** `elevation/control`
 
 ### OTP Cell
@@ -74,6 +74,6 @@ One-time-code entry for phone, email, eSign and nominee verification.
 
 **Anatomy (default variant):** radius radius/12 · fill glass/field · stroke border/strong 1.5px · effect elevation/control
 
-**Colour tokens across all variants:** `border/danger` `border/focus` `border/strong` `border/success` `glass/field` `surface/disabled` `text/disabled` `text/primary`
+**Colour tokens across all variants:** `border/danger` `border/default` `border/focus` `border/strong` `border/success` `glass/control` `glass/field` `text/disabled` `text/primary`
 **Text styles:** `num-display-md/Medium` · **Effects:** `elevation/control`
 <!-- AUTO:END -->
