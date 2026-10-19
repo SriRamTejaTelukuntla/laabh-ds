@@ -56,6 +56,6 @@ A large, card-shaped choice for questions where each option needs a sentence of 
     - Title — text body-lg/Medium · fill text/primary
 - Control — fill glass/field · stroke border/strong 1.5px
 
-**Colour tokens across all variants:** `border/brand` `border/strong` `glass/control` `glass/edge` `glass/field` `glass/hairline` `icon/brand` `icon/primary` `surface/brand` `surface/brand-subtle` `surface/card` `surface/static-white` `text/brand` `text/brand-strong` `text/neutral` `text/primary` `text/secondary`
+**Colour tokens across all variants:** `border/brand` `border/strong` `glass/control` `glass/edge` `glass/field` `glass/hairline` `icon/brand` `icon/static-white` `surface/brand` `surface/brand-subtle` `surface/card` `surface/static-white` `text/brand` `text/brand-strong` `text/neutral` `text/primary` `text/secondary`
 **Text styles:** `body-lg/Medium` `body-sm/Regular` `caps-md/Semibold` · **Effects:** `elevation/card`
 <!-- AUTO:END -->

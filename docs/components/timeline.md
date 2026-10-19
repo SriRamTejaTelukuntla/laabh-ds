@@ -43,7 +43,7 @@ An ordered, non-interactive status history: KYC review progress, order lifecycle
   - Title — text body-lg/Medium · fill text/primary
   - Description — text body-sm/Regular · fill text/secondary
 
-**Colour tokens across all variants:** `border/brand` `border/default` `data/track` `glass/field` `icon/primary` `surface/brand` `surface/brand-subtle` `surface/danger` `text/brand` `text/danger` `text/primary` `text/secondary`
+**Colour tokens across all variants:** `border/brand` `border/default` `data/track` `glass/field` `icon/static-white` `surface/brand` `surface/brand-subtle` `surface/danger` `text/brand` `text/danger` `text/primary` `text/secondary`
 **Text styles:** `body-lg/Medium` `body-sm/Medium` `body-sm/Regular` · **Effects:** —
 
 ### Timeline
