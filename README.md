@@ -48,7 +48,7 @@ You can say *"stop"*, *"change X"*, or *"redo that screen"* at any point.
 ## Rules of the road
 
 - Figma is the source of truth for **values**. This repo is the source of truth for **how to use them**.
-- Product screens go in the **product file**, never in the design-system file.
+- Each feature's screens go in **its own Figma file** (`Laabh — <Feature>`), never in the design-system file.
 - Changes to rules, docs or components are reviewed by a DS owner before they reach everyone.
 - If Claude says a component is missing, that's a feature: it means the system has a gap. Use `/new-component`.
 

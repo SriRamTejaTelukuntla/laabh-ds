@@ -1,6 +1,6 @@
 ---
 name: get-latest
-description: Start the day with the newest rules, docs and skills. Safely updates `main` from GitHub (fast-forward only, never touches the person's unsaved work), says in plain words what's new since they last checked (new skills, rules, tokens, components, breaking changes), and optionally checks the setup (Figma sign-in, DS file, product file key) and where a feature was left off. Works without a GitHub remote too. Use when someone says "get latest", "update", "pull", "start my day", "what's new", "am I up to date", "check my setup", or "continue the <feature> screens".
+description: Start the day with the newest rules, docs and skills. Safely updates `main` from GitHub (fast-forward only, never touches the person's unsaved work), says in plain words what's new since they last checked (new skills, rules, tokens, components, breaking changes), and optionally checks the setup (Figma sign-in, DS file, the feature's Figma file) and where a feature was left off. Works without a GitHub remote too. Use when someone says "get latest", "update", "pull", "start my day", "what's new", "am I up to date", "check my setup", or "continue the <feature> screens".
 argument-hint: "[setup] [feature]"
 ---
 
@@ -81,7 +81,7 @@ Report each check as ✅ or ❌ with the fix, in plain words:
 |---|---|---|
 | Figma plugin signed in | `whoami` (Figma plugin) | "Type `/mcp`, choose **figma**, and sign in" (README step 4) |
 | DS file reachable | `get_screenshot` of node `1:12` (Buttons page) in fileKey `mmAhXn4vJKlmuThcAMgGss` | Ask a DS owner for access to "Laabh — Design System" |
-| Product file key set | `docs/figma-map.md`, "Laabh — Product" row: a real key, not `_TBD: …_` | Tell a DS owner. `/prd-to-screens` can't build until it's set |
+| Feature file linked (when a feature is named) | `plan-check.py` prints `figma file:` from the `plan.md` header | Create a blank Figma file `Laabh — <Feature>` and paste its link (`/prd-to-screens` step 0). The DS library comes with it (published org-wide) |
 | Repo up to date | Steps 1–2 above | Whatever step 1 reported |
 
 ## 5 · Where you left off (`<feature>`)
@@ -97,7 +97,7 @@ Keep it short:
 Up to date: main has 3 new changes (fast-forwarded) · or: no GitHub remote yet, nothing to pull
 You're on: prd/kyc, 2 unsaved files (left as they are), missing 3 changes from main
 What's new: new /get-latest skill; tokens rule changed (space/3 removed: use space/4)
-Setup: ✅ Figma · ✅ DS file · ❌ product file key not set (ask a DS owner)
+Setup: ✅ Figma · ✅ DS file · ❌ kyc has no Figma file yet (create Laabh — KYC)
 Where you left off (kyc): K01–K03 done, K04 next, 1 open question
 ```
 End with the one thing to do next (save work, bring main in, continue a screen), if any.

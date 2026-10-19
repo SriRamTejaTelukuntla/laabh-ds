@@ -5,7 +5,9 @@ Quality bar: the build rules in `.claude/rules/` (including `trading-ux.md` and 
 and the review rulebooks in `docs/ux/` at the checkpoints.
 
 ## 0 · Setup
-- Run `/get-latest`. Confirm the product Figma file key in `docs/figma-map.md` and that the Figma plugin is signed in.
+- Run `/get-latest`. Confirm the Figma plugin is signed in.
+- Feature file: the designer creates a blank Figma file `Laabh — <Feature>` (the DS library comes with it, published org-wide) and shares the link. Accept any "Library updates available" first.
+  The link goes in the `plan.md` header and in `docs/figma-map.md` § Feature files.
 - Create `prds/<feature>/` with `prd.md` (the PRD as given) and `plan.md` from [plan-template.md](plan-template.md). Check it with `scripts/plan-check.py`.
 
 ## 1 · Understand (no Figma yet)
@@ -31,7 +33,7 @@ Write `plan.md` and show it:
 **Wait for approval.**
 
 ## 3 · Build one screen → checkpoint ✋
-- In the product file, create (after asking) the page `<Feature>` and a Section per flow step.
+- In the feature's file, create (after asking) the page `Screens` and a Section per flow step.
 - Build the first screen in Light: frame 390×844 → Screen Atmosphere instance → Status Bar → header → body → footer → Home Indicator.
   Instances only, tokens only, auto layout, one section per `use_figma` call, screenshot after each.
 - Run `/ds-audit` on the frame (fix its S2s), then a **quick design review** at stage *in review* (`S1`–`S2` only, `ux-governance.md` §2):

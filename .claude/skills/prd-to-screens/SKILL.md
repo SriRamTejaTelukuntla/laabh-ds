@@ -1,6 +1,6 @@
 ---
 name: prd-to-screens
-description: Turn a PRD into Figma screens in the product file, built only from DS components and tokens, in Light and Dark, with checkpoints. Reads the PRD, writes prds/<feature>/plan.md (flows, screens, states, rules that apply, questions, gaps), builds one screen for approval, then the rest, the Dark copies and the handoff annotations, and finishes with /ds-audit and /design-review. Resumes from plan.md on any laptop. Use when someone pastes or attaches a PRD, says "build the screens for X", "design this feature", or "continue the <feature> screens".
+description: Turn a PRD into Figma screens in the feature's own Figma file, built only from DS components and tokens, in Light and Dark, with checkpoints. Reads the PRD, writes prds/<feature>/plan.md (flows, screens, states, rules that apply, questions, gaps), builds one screen for approval, then the rest, the Dark copies and the handoff annotations, and finishes with /ds-audit and /design-review. Resumes from plan.md on any laptop. Use when someone pastes or attaches a PRD, says "build the screens for X", "design this feature", or "continue the <feature> screens".
 argument-hint: "<PRD (paste, file or doc text)> | continue <feature>"
 ---
 
@@ -12,7 +12,7 @@ Build to `.claude/rules/` (components, tokens, layout, typography, light-dark, n
 
 ## Rules
 - **Checkpoints:** stop for an OK after the plan (2), after the first screen (3), and at the end of each flow-step section (4). Never sprint through.
-- **Product file only.** Never build in, or change, the DS file. Ask before creating a page or a section, and before moving or deleting anything you didn't create in this session.
+- **The feature's own file only** (`Laabh — <Feature>`). Never build in, or change, the DS file, and never put another feature's screens in it. Ask before creating a page or a section, and before moving or deleting anything you didn't create in this session.
 - **Components first, tokens only.** Instances of DS components, set through their properties. Never detach. Never draw a lookalike.
   Missing component or token → **stop**: add it to the plan's Gaps and offer `/new-component`. Don't improvise a one-off.
 - **Don't build a rule break quietly.** A PRD ask that breaks `trading-ux.md` or `accessibility.md` goes into Open questions; it isn't built, and it isn't dropped silently either.
@@ -22,7 +22,11 @@ Build to `.claude/rules/` (components, tokens, layout, typography, light-dark, n
 
 ## 0 · Setup
 1. Run the `/get-latest` checks (or `/get-latest setup`): the repo is up to date, the Figma plugin is signed in (`whoami`).
-2. **Product file key** in `docs/figma-map.md` ("Laabh — Product"). If it still says `_TBD_`, **stop**: ask a DS owner to create the product file, enable the DS library in it, and add the key. Steps 1–2 can still run.
+2. **The feature's Figma file.** Every feature has its own. No link yet? Ask the person to create a blank Figma file `Laabh — <Feature>` and paste its link (steps 1–2 can run before it exists).
+   Put the link in the `plan.md` header (`**Figma file:**`) and add a row to `docs/figma-map.md` § Feature files. Then check it:
+   - **DS library on** (read-only): `(await figma.teamLibrary.getAvailableLibraryVariableCollectionsAsync()).some((c) => c.key === 'f10929d83247605f5e490e15a6d3ed57e1ce70ce')` (Color Tokens).
+     The DS is published to the whole organisation, so this is normally true. If not: "turn on Laabh — Design System in Assets → Libraries".
+   - **Library up to date:** Scripts can't see pending library updates, so ask: does the file show **Library updates available** (Assets panel)? If yes, have it accepted (Review → Update all) first. Ask again whenever you resume, and after a DS publish.
 3. Load `figma:figma-use` and `figma:figma-generate-design` before the first `use_figma` call.
 4. **New feature:** pick a kebab-case name with the person. `git switch -c prd/<feature>` (from an up-to-date `main`), create `prds/<feature>/prd.md` (the PRD exactly as given)
    and `prds/<feature>/plan.md` from `docs/process/plan-template.md`.
@@ -46,7 +50,7 @@ Build to `.claude/rules/` (components, tokens, layout, typography, light-dark, n
 3. Show it in plain words: the flows, the screen list (one line each), the questions that block building, and the gaps. Name the Figma page and section names you'll create. **Wait for approval.**
 
 ## 3 · Build one screen → checkpoint ✋
-1. **Look first:** screenshot the product file's target page. Ask, then create the page `<Feature>` and a Section per flow step (`<n> · <Step name>`), in clear space.
+1. **Look first:** screenshot the feature file's pages. Ask, then create the page `Screens` and a Section per flow step (`<n> · <Step name>`), in clear space.
 2. **Build kit:** `python3 scripts/build-kit.py <component names…>` prints one `const KIT = {…};` line with the library keys (components, text and effect styles, variable collections).
    Paste it at the top of each `use_figma` script. Import by key, never by a node ID from another file:
    components `figma.importComponentSetByKeyAsync(key)` (`set: true`) or `importComponentByKeyAsync`; styles `figma.importStyleByKeyAsync`;

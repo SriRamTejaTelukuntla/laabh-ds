@@ -11,7 +11,7 @@ Read this file fully. Then load only the docs your task needs (see "Where to loo
 | | |
 |---|---|
 | DS Figma file | "Laabh — Design System", fileKey `mmAhXn4vJKlmuThcAMgGss` (library: read, don't edit) |
-| Product Figma file | Separate file that uses the DS as a published library. Key is in `docs/figma-map.md` |
+| Feature Figma files | One file per feature, `Laabh — <Feature>`, with the DS library (published org-wide). Link in `prds/<feature>/plan.md`, list in `docs/figma-map.md` |
 | Default canvas | **390×844** (iPhone 16e/17e, the smallest current iPhone). Check dense screens at 375×667 (SE) |
 | Modes | Color Tokens: `Light` / `Dark`. Typography Tokens: `Mobile` / `Tablet` / `Desktop` |
 | Fonts | Inter (UI), Space Grotesk (numbers `num-*`, and titles `display-md/xl/Semibold`), JetBrains Mono (docs only) |
@@ -61,7 +61,7 @@ Read this file fully. Then load only the docs your task needs (see "Where to loo
   **Load the `figma:figma-use` skill before any `use_figma` call**, and `figma:figma-generate-design` when building screens.
 - **DS owners (optional):** figma-console MCP (Desktop Bridge plugin) for bulk audits and token export. With figma-console:
   call `figma_navigate` with `lock: true` on the DS file first, and pass `fileKey` + `timeout: 30000` to `figma_execute`.
-- Node IDs in docs are stable in the DS file. In product files, find components by **key** (`importComponentSetByKeyAsync`)
+- Node IDs in docs are stable in the DS file. In feature files, find components by **key** (`importComponentSetByKeyAsync`)
   or by library search. Never by a node ID copied from another file.
 
 ## Context across people and machines
@@ -71,7 +71,7 @@ When you start work: run `/get-latest`, then read `prds/<feature>/plan.md` if co
 When you stop: update `plan.md` (what's done, what's next, Figma links) before ending the session.
 
 **"Check my setup"** means: confirm the Figma plugin is signed in (`whoami`), the DS file is reachable (screenshot page `1:12`),
-the product file key is set in `docs/figma-map.md`, and `git status` shows the repo up to date with GitHub. Report each check in plain words.
+for a named feature, its `plan.md` has a Figma file link, and `git status` shows the repo up to date with GitHub. Report each check in plain words.
 
 ## Editing this repo
 

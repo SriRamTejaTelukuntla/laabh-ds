@@ -6,7 +6,7 @@ It's how work survives switching laptops or people. Check it with `python3 scrip
 ```markdown
 # <Feature name>: screen plan
 
-> **Status:** planning · **Updated:** <date> · **Branch:** `prd/<feature>` · **Figma:** <page link, once created>
+> **Status:** planning · **Updated:** <date> · **Branch:** `prd/<feature>` · **Figma file:** <link to `Laabh — <Feature>`>
 
 ## Review context
 | Context | Value |
@@ -47,4 +47,5 @@ It's how work survives switching laptops or people. Check it with `python3 scrip
 **Screen IDs:** one letter per feature + 2 digits (`K01`, `K02`). Extra state frames add a lower-case letter (`K03b Verify · wrong code`).
 **Type:** flow step · result · tab · detail · sheet state (`docs/patterns/screen-anatomy.md`).
 **Status**, in order: `planned` → `built` (Light) → `approved` → `dark` → `annotated` → `reviewed`. `blocked` (with the reason in the Log) can replace any of them.
-**Figma:** the Light frame's node link, then the Dark one (`Light 12:34 · Dark 12:90`).
+**Figma file:** every feature has its own Figma file, `Laabh — <Feature>`, with the DS library on. Its link goes in the header (and in `docs/figma-map.md` § Feature files).
+**Figma** (Screens column): the Light frame's node ID in that file, then the Dark one (`Light 12:34 · Dark 12:90`).

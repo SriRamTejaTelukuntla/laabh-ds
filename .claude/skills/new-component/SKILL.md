@@ -100,7 +100,7 @@ After the PR is merged: publish the Figma library with the same version note, ru
 
 ## Changing an existing component
 Same steps, with the proposal titled `Change: <Name>` and only the parts that change. Also:
-- List where it's used (instances in the product file, `search_design_system`) and what each change does to them.
+- List where it's used (instances in the feature files, `docs/figma-map.md` § Feature files; `search_design_system`) and what each change does to them.
 - **Breaking** (a renamed or removed prop, variant or layer that overrides depend on): commit as `feat!` with a `BREAKING CHANGE:` footer. Keep the old variant or component one release,
   mark it `deprecated` in its doc with the replacement, then remove it.
 - After the change: re-run step 7.2 for its doc (`--groups <kebab-name>` finds the IDs) and suggest `/ds-audit` on product pages that use it.
