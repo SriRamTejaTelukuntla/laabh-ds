@@ -34,7 +34,7 @@ Write `plan.md` and show it:
 - In the product file, create (after asking) the page `<Feature>` and a Section per flow step.
 - Build the first screen in Light: frame 390×844 → Screen Atmosphere instance → Status Bar → header → body → footer → Home Indicator.
   Instances only, tokens only, auto layout, one section per `use_figma` call, screenshot after each.
-- Self-check against `/ds-audit` rules, then a **quick design review** at stage *in review* (`S1`–`S2` only, `ux-governance.md` §2):
+- Run `/ds-audit` on the frame (fix its S2s), then a **quick design review** at stage *in review* (`S1`–`S2` only, `ux-governance.md` §2):
   walk the screen's task against its "Rules that apply". Fix what you find before showing it; mention anything you couldn't fix.
 - Show the screenshot. **Wait for OK or changes.** Record decisions in `plan.md`.
 
@@ -52,7 +52,8 @@ Write `plan.md` and show it:
 - Annotate on the Light frames; Dark frames share them.
 
 ## 6 · Audit & review
-- Run `/ds-audit` on the page: raw values, detached instances, unstyled text, missing Dark, contrast (measured), hit targets.
+- Run `/ds-audit` on the page, saved to `prds/<feature>/audit.md`: raw values, detached instances, unstyled text, screen chrome, Light/Dark pairs,
+  contrast (measured in both modes), hit targets. Findings inside DS components go to a DS owner, not the screen.
 - Run `/design-review` at stage *final*: one report for UX + accessibility (`ux-governance.md` §9), saved to `prds/<feature>/review.md`.
 - **Gate:** any `S1` is fixed before handoff. Each `S2` is fixed, or waived with a reason in `plan.md` (Decisions & waivers). `S3`/`S4` go to the report.
 - Fix what you can (after the person's OK); list the rest. Report: screens built (links), decisions made, open questions, gaps, audit result, review verdict.

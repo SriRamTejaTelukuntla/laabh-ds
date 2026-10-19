@@ -4,7 +4,8 @@ Usage: python3 scripts/figma-result.py <marker> <out.json> [--transcript <sessio
 <marker> is a unique string from the result, normally its exportedAt value (e.g. 2026-10-16T13:44:06.843Z).
 The script searches the most recently changed Claude Code session transcripts (~/.claude/projects/*/*.jsonl)
 for the last tool result containing the marker, unwraps figma-console's {"_mcp": ..., "result": ...} envelope,
-and writes the bare result. Exits non-zero if nothing is found.
+and writes the bare result. A result too large to show inline is saved by Claude Code to a tool-results file
+(~/.claude/projects/*/<session>/tool-results/*.txt); those are searched too. Exits non-zero if nothing is found.
 """
 import json
 import sys
@@ -50,6 +51,9 @@ def search(path, marker):
                 entry = json.loads(line)
             except ValueError:
                 continue
+            if isinstance(entry, dict) and "_mcp" in entry and "result" in entry:
+                envelope = entry  # a saved tool-results file holds the bare envelope
+                continue
             for c in candidates(entry, marker):
                 if "_mcp" in c:
                     envelope = c
@@ -66,7 +70,8 @@ def main(args):
     if "--transcript" in args:
         files = [Path(args[args.index("--transcript") + 1])]
     else:
-        files = sorted(Path.home().glob(".claude/projects/*/*.jsonl"), key=lambda p: p.stat().st_mtime, reverse=True)[:5]
+        recent = lambda pattern, n: sorted(Path.home().glob(pattern), key=lambda p: p.stat().st_mtime, reverse=True)[:n]
+        files = recent(".claude/projects/*/*/tool-results/*", 10) + recent(".claude/projects/*/*.jsonl", 5)
     for path in files:
         found = search(path, marker)
         if found is not None:

@@ -45,7 +45,7 @@ Read this file fully. Then load only the docs your task needs (see "Where to loo
 | Screen layout, navigation, forms, sheets | `docs/patterns/*.md` |
 | Example screens (reference only, not canonical) | `docs/references/selected-screens.md` |
 | Add or change a component | `/new-component` → `docs/process/new-component.md` |
-| Check a Figma page for raw values or detached instances | `/ds-audit` |
+| Check a Figma page against the rules (tokens, instances, Light/Dark, contrast, hit targets) | `/ds-audit` (read-only report) |
 | Review a design for UX and accessibility (severity, findings, verdict) | `/design-review` (planned) → `docs/ux/ux-governance.md`, `docs/ux/accessibility.md` |
 | What a UX law means, and when to cite it | `docs/ux/ux-laws.md` (reviews only) |
 | Product decisions, waivers, "essential" rulings | `docs/ux/decisions.md` |

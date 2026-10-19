@@ -66,6 +66,7 @@ Then:
 - **NOT IN FIGMA** components: report them, and ask whether to deprecate the doc.
 
 ## 5 · Hand-written follow-ups
+- **New, renamed or removed components:** update `DS_NAMES` / `TAPPABLE` / `CONTROLS` in `scripts/figma/audit.js` (what `/ds-audit` treats as a DS component or a tap target).
 - **New tokens:** if they form a new role or group, add them to the "Pick by role" table in `docs/foundations/<area>.md`. If they're component-specific, mention them in that component's doc.
 - **Renamed or removed tokens:** `grep -rn "<old name>" docs .claude CLAUDE.md README.md` and fix every mention. A removed token that's still bound in Figma breaks silently, so scan the bindings (snippet below) and report what's still bound.
 - **Figma doc frames:** the DS file documents tokens too (Colors page `1:3`, Elevation, component Reference frames). Scan their text for changed names (snippet below). List what's stale and ask before editing. When updating: save a version, clone an existing row or swatch, bind its fill, set its text, then screenshot Light and Dark.
