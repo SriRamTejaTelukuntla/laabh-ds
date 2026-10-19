@@ -14,7 +14,7 @@ Agent drafts, designer refines, DS owner approves. Run with `/new-component`.
 | 4 | **Agent draft** in the DS file: new page `↳ <Name>` under COMPONENTS (or PRODUCT COMPONENTS for product-specific), frames `— Variants` (component set), `— Reference`; all values bound; screenshot | Agent | Draft component set, `Status: draft` |
 | 5 | **Designer refine**: visual polish in Figma; agent re-checks bindings after every round | Designer | Refined set |
 | 6 | **Review checklist** (below) | DS owner | Approve / changes |
-| 7 | **Document**: `docs/components/<name>.md` from `_template.md` + AUTO block via `scripts/figma/inspect-components.js` (later refreshes: `scripts/write-component-docs.py`); add a row to `docs/index.md`; update rules/patterns if behaviour is new; CHANGELOG entry (minor) | Agent | PR via `/share-changes` |
+| 7 | **Document**: `docs/components/<name>.md` from `_template.md` + AUTO block via `scripts/figma/inspect-components.js` (`write-component-docs.py --groups <name>=<set id>` for the first run, then plain `--groups <name>`); add a row to `docs/index.md`; update rules/patterns if behaviour is new; CHANGELOG entry (minor) | Agent | PR via `/share-changes` |
 | 8 | **Publish**: DS owner merges the PR, publishes the Figma library with the same version note, runs `/ds-sync` | DS owner | Version tag, library update |
 
 ## Review checklist
