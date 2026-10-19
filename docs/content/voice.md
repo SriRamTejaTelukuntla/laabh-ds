@@ -9,5 +9,12 @@
 - Money: `₹` + Indian grouping (₹1,84,250.75). Changes always signed (+1.09%, −0.42%).
 - Plain words over jargon. When jargon is unavoidable (XIRR, LTP), explain it in a Tooltip.
 
+## Vocabulary (one term per concept)
+Reviews check that the same function has the same name everywhere (`NH-4`, `A11Y-CPY-09`). Add a row when the team picks a term.
+
+| Concept | Use | Don't use |
+|---|---|---|
+| _to decide_ | | |
+
 ## To decide
 - Tone of voice principles, error message formula, regional language plans, legal/compliance phrasing owners.

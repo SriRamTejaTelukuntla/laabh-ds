@@ -24,6 +24,9 @@ Agent drafts, designer refines, DS owner approves. Run with `/new-component`.
 - [ ] All states: Default, Pressed/Hover, Focus, Disabled, and Error/Success where relevant
 - [ ] `— Dark` copies of the doc frames to the right, set to Dark; looks right through tokens alone
 - [ ] Contrast AA in both modes; hit target ≥ 44; non-colour cues
+- [ ] Accessibility spec in the doc (`docs/ux/accessibility.md` §8): accessible name for icon-only parts, role and states, value, error text, live announcement if it shows status
+- [ ] Every gesture has a tap alternative; anything that moves or updates on its own can be paused; nothing flashes more than 3 times a second
+- [ ] Follows the trading build rules where relevant (`.claude/rules/trading-ux.md`): e.g. money in `num-*` with a sign, side shown in text
 - [ ] Auto layout, resizes correctly (Fill/Hug), no detached nested instances
 - [ ] Doc written, index updated, CHANGELOG entry, `Status` set (`beta` first, `stable` after use in 2 features)
 

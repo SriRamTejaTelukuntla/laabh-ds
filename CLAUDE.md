@@ -16,7 +16,8 @@ Read this file fully. Then load only the docs your task needs (see "Where to loo
 | Modes | Color Tokens: `Light` / `Dark`. Typography Tokens: `Mobile` / `Tablet` / `Desktop` |
 | Fonts | Inter (UI), Space Grotesk (numbers `num-*`, and titles `display-md/xl/Semibold`), JetBrains Mono (docs only) |
 | Icons | Lucide, components named `icon/<lucide-name>`, 24px, 2px stroke |
-| Accessibility bar | WCAG 2.2 AA |
+| Accessibility bar | WCAG 2.2 AA + house rules (`docs/ux/accessibility.md`) |
+| Platforms | iOS + Android (web not in scope yet). Decisions that shape the rules: `docs/ux/decisions.md` |
 
 ## Golden rules (details in `.claude/rules/`)
 
@@ -27,8 +28,11 @@ Read this file fully. Then load only the docs your task needs (see "Where to loo
 5. **Checkpoint, don't sprint.** Show a plan, build one screen, show a screenshot, wait for an OK, then continue.
 6. **Verify visually.** Screenshot after every build step. Fix clipping, overflow, hug-vs-fill mistakes and misalignment before reporting.
 7. **No gaps filled silently.** If a PRD needs something the DS lacks, stop and propose `/new-component`. Don't improvise a one-off.
-8. **Save progress in the repo**, never only in chat: `prds/<feature>/plan.md` holds the screen list, Figma links and status.
-9. **Don't commit, push or publish** unless the person asks. Use `/share-changes` for that.
+   The same goes for a PRD request that breaks a trading-UX or accessibility rule: raise it, don't build it quietly.
+8. **Safe, honest, accessible.** Build to `.claude/rules/trading-ux.md` and `accessibility.md`. Before handoff, `/design-review` checks UX and accessibility
+   against `docs/ux/`; any `S1` finding is fixed first.
+9. **Save progress in the repo**, never only in chat: `prds/<feature>/plan.md` holds the screen list, Figma links and status.
+10. **Don't commit, push or publish** unless the person asks. Use `/share-changes` for that.
    Every commit, branch and PR follows `docs/process/git-conventions.md` (Conventional Commits).
 
 ## Where to look
@@ -42,6 +46,9 @@ Read this file fully. Then load only the docs your task needs (see "Where to loo
 | Example screens (reference only, not canonical) | `docs/references/selected-screens.md` |
 | Add or change a component | `/new-component` → `docs/process/new-component.md` |
 | Check a Figma page for raw values or detached instances | `/ds-audit` |
+| Review a design for UX and accessibility (severity, findings, verdict) | `/design-review` (planned) → `docs/ux/ux-governance.md`, `docs/ux/accessibility.md` |
+| What a UX law means, and when to cite it | `docs/ux/ux-laws.md` (reviews only) |
+| Product decisions, waivers, "essential" rulings | `docs/ux/decisions.md` |
 | Refresh tokens and docs after a Figma change | `/ds-sync` (DS owners) |
 | Get the newest docs and skills / share your changes | `/get-latest`, `/share-changes` |
 | Commit, branch and PR format | `docs/process/git-conventions.md` |

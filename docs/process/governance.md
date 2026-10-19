@@ -25,6 +25,8 @@ Run `/ds-sync` at least before each release, and whenever someone reports "the d
 ## Cadence
 - Weekly: review open PRs and proposals.
 - Each release: `/ds-audit` on the product file's active pages; update component statuses.
+- Each feature before handoff: `/design-review` (UX + accessibility, `docs/ux/`). `S1` findings block handoff; `S2` waivers are recorded.
+- Monthly: look for findings that came up in 3+ reviews and propose promoting them to `TR-*` rules (`docs/ux/ux-governance.md` §10).
 
 ## Known debt
 See "Known issues" in `CHANGELOG.md` and "Figma doc drift" sections in component docs.

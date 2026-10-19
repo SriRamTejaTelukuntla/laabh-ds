@@ -16,14 +16,17 @@ A floating, iOS-style modal panel for a focused task, choice or consent, shown o
 - Floats **8px** from the screen sides and bottom; all four corners `radius/40`; the home indicator stays visible underneath.
 - Always place a `Sheet Scrim` instance (full screen, `surface/static-scrim`) between the screen and the sheet.
 - Put screen-specific content in the **`Content` instance-swap slot** (the placeholder is `radius/12`; real contents have no radius of their own). Build the content as a product component named `Sheet Content/<name>` (on PRODUCT COMPONENTS), never by detaching the sheet.
-- Dismiss: drag down or tap the scrim. For blocking consent sheets hide the close button (`Show close` = false).
+- Dismiss: drag down or tap the scrim, **plus** a visible way out: the close button, or a Cancel/decline button in the footer.
+  `Show close` = false only when the footer already has that exit (`D-01`, `docs/ux/decisions.md`).
 - Title `display-md/Semibold` (one line), description `label-md/Regular` in `text/secondary`.
 
 ## Content
 - Title states the decision ("Link your bank"). Description says why we ask, in one line. Primary button = the verb.
 
 ## Accessibility
-- Focus moves into the sheet when it opens. Close is always reachable unless the sheet is blocking consent.
+- Focus moves into the sheet when it opens and returns to the trigger when it closes (annotate `AN-02`).
+- There is always a keyboard and screen-reader exit: the close button or the footer's Cancel/decline (`D-01`, `A11Y-FOC-02`).
+- If the sheet holds an order or form input, dismissing asks first or keeps the draft (`M-06`).
 
 ## Figma doc drift
 - none (sheet Content instances follow the placeholder master, `radius/12`, since 16 Oct 2026). Product sheet contents (`Sheet Content/*`) have no radius by design: they sit inside the sheet.
