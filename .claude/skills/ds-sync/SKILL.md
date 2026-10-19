@@ -103,7 +103,7 @@ Tell the person, in plain words:
 - what changed in Figma and which repo files now reflect it;
 - anything you couldn't fix (stale Figma doc frames, NOT IN DOCS components, `raw` counts);
 - a proposed commit message in the git-conventions format, with a `Figma-Version:` footer if a version was saved.
-Then ask whether to add a `CHANGELOG.md` entry and whether to commit (`/share-changes` once it exists).
+Then ask whether to add a `CHANGELOG.md` entry and whether to share it with `/share-changes`.
 
 ## Gotchas
 - Figma reads **opacity** variables on a 0–100 scale. A value of `1` means 1%.
