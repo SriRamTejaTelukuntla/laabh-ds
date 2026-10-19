@@ -24,7 +24,7 @@ Start here to find the right component. Then open its doc in `docs/components/`:
 | Dropdown Menu | The open menu surface | stable | `1:14` | `29:945` | `fb61ecda039901b5f278b810af61aa6bf8e66ea7` | Content: Fit, Scroll |
 | Icon | Size and stroke for any `icon/*` glyph (inside every DS icon) | stable | `1:6` | `9:194` | `95ec73f49124285338b2b89dc65fc610480657ac` | Size: 10, 12, 14, 16, 20, 24, 28, 32 · Glyph: instance swap |
 | Option Card | Large selectable choice (single/multi) | stable | `49:4` | `53:120` | `6c20d02889cc7f90f7266abc2563ce1042d2869b` | Selection · Control: Radio, Check, None |
-| OTP Input | One-time code entry | stable | `49:5` | `52:158` | `0cb4798c487c4f7cd3cc39cec53d986ab3d14333` | Length: 4, 6 · State: Empty, Typing, Filled, Error, Success |
+| OTP Input | One-time code entry | stable | `49:5` | `52:158` | `0cb4798c487c4f7cd3cc39cec53d986ab3d14333` | Length: 4, 6 · State: Empty, Typing, Filled, Error, Success, Disabled · Helper, Timer |
 | OTP Cell | Single OTP digit (part of OTP Input) | stable | `49:5` | `52:13` | `e0e8f1261050022b955612ce4b10e83869dfe1e0` | State |
 | Radio | Single choice in a short list | stable | `1:15` | `21:118` | `2c88d3e9a1220fc01673502703f3e34de8c687cd` | Selection · State · Size: sm, md |
 | Radio Group | Group of radios with legend/helper/error | stable | `1:15` | `21:189` | `6bcbb8e7923c093b0ec01b4d5d1c7881becafd62` | Direction: Vertical, Horizontal |
@@ -40,7 +40,7 @@ Start here to find the right component. Then open its doc in `docs/components/`:
 | TextField | Single-line input | stable | `1:21` | `25:928` | `42fe67336659ed271c5ced1c914d24c0d9ea571b` | Style: Outline, Filled · Size: sm, md, lg · State (+ `TextField/Search`, `TextField/Amount`) |
 | Timeline / Timeline Item | Ordered status history | stable | `49:6` | `56:39` | `31f864fc2e309e1df1288e70ed1ca72288906347` | State: Done, Active, Pending, Error (list: `Timeline` `56:40`) |
 | Tooltip | Contextual hint pointing at an element | stable | `1:22` | `33:134` | `8e91a7da4b948434551a2b6bd1442dc6346899ae` | Direction: 12 placements |
-| Top Bar | Header for onboarding/multi-step flows | stable | `49:7` | `51:43` | `62be1b1e192159c77b9853dec8d1cfb8f635a49c` | Progress: On, Off · Show step |
+| Top Bar | Header for onboarding/multi-step flows | stable | `49:7` | `51:43` | `62be1b1e192159c77b9853dec8d1cfb8f635a49c` | Progress: On, Off · Stage: 1–5 · Show step |
 
 <!-- AUTO:END components -->
 
