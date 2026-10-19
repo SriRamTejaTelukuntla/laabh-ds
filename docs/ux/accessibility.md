@@ -1,7 +1,7 @@
 # Accessibility: WCAG 2.2 AA, checked at design time
 
 The deep reference for accessibility. [`ux-governance.md`](ux-governance.md) names WCAG 2.2 AA as the floor; this file says what that floor means
-for each Laabh screen and how to check it in a design. The `/design-review` skill (planned) reads it together with the governance file.
+for each Laabh screen and how to check it in a design. The `/design-review` skill reads it together with the governance file.
 The always-on build rules are the short version in [`.claude/rules/accessibility.md`](../../.claude/rules/accessibility.md).
 
 **The rule that governs everything below: raise only what the design actually triggers.** Every criterion has a *Skip when* line.

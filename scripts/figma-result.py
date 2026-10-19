@@ -43,7 +43,7 @@ def search(path, marker):
     """Prefer the last figma-console envelope; otherwise the largest matching object (use_figma output)."""
     envelope, largest, size = None, None, 0
     escaped = json.dumps(marker)[1:-1]  # how a marker with quotes looks inside a JSON string in the transcript
-    with open(path, encoding="utf-8") as f:
+    with open(path, encoding="utf-8", errors="replace") as f:
         for line in f:
             if marker not in line and escaped not in line:
                 continue
@@ -70,7 +70,8 @@ def main(args):
     if "--transcript" in args:
         files = [Path(args[args.index("--transcript") + 1])]
     else:
-        recent = lambda pattern, n: sorted(Path.home().glob(pattern), key=lambda p: p.stat().st_mtime, reverse=True)[:n]
+        text = lambda p: p.suffix in (".txt", ".json", ".jsonl")  # tool-results also holds screenshots (.png)
+        recent = lambda pattern, n: sorted(filter(text, Path.home().glob(pattern)), key=lambda p: p.stat().st_mtime, reverse=True)[:n]
         files = recent(".claude/projects/*/*/tool-results/*", 10) + recent(".claude/projects/*/*.jsonl", 5)
     for path in files:
         found = search(path, marker)

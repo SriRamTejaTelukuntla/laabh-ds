@@ -8,7 +8,7 @@ It is the UX layer on top of the build rules in `.claude/rules/` and the docs in
 
 Law definitions live in [`ux-laws.md`](ux-laws.md). The accessibility floor lives in [`accessibility.md`](accessibility.md).
 This file decides *when* they apply, how serious a problem is, and how to report it.
-The `/design-review` skill (planned) runs this file and `accessibility.md` together and writes **one** report.
+The `/design-review` skill runs this file and `accessibility.md` together and writes **one** report.
 
 ### What this review covers, and what it hands off
 
