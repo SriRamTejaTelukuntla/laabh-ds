@@ -7,7 +7,7 @@ Multi-line free text (feedback, reason for request, address line if long).
 ## Rules
 - Show a count (`Show count`, `Count` "0/280" in `num-body-sm`) whenever there's a limit.
 - Never for numbers, dates, amounts or anything with a format → TextField / Dropdown.
-- Same label/helper/error behaviour as TextField. Use the same `Style` as the other fields in the form.
+- Same label/helper/error/disabled behaviour as TextField. Use the same `Style` as the other fields in the form.
 
 ## Figma doc drift
 - Edges are `border/strong` like TextField. `State=Hover` keeps `border/hover` (Filled, 2.47:1 in Light) and `icon/secondary` (Outline) as its edge: iOS and Android don't hover, so it stays until web is in scope (decided 19 Oct 2026).
@@ -44,6 +44,6 @@ Multi-line free text (feedback, reason for request, address line if long).
 - Helper row — gap space/8
   - Helper — text body-sm/Regular · fill text/secondary
 
-**Colour tokens across all variants:** `border/danger` `border/focus` `border/hover` `border/strong` `glass/control` `glass/field` `icon/secondary` `surface/disabled` `text/danger` `text/disabled` `text/placeholder` `text/primary` `text/secondary`
+**Colour tokens across all variants:** `border/danger` `border/default` `border/focus` `border/hover` `border/strong` `glass/control` `glass/field` `icon/secondary` `text/danger` `text/disabled` `text/placeholder` `text/primary` `text/secondary`
 **Text styles:** `body-sm/Medium` `body-sm/Regular` `label-md/Regular` `num-body-sm/Regular` · **Effects:** `elevation/control`
 <!-- AUTO:END -->

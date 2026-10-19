@@ -25,6 +25,7 @@ Single-line input with label, helper, prefix/suffix and validation states.
 ## Accessibility
 - Never rely on red alone: the error message carries ⚠ and words. Labels stay visible for screen readers and memory.
 - Field edges are `border/strong`: 3.81:1 Light, 3.41:1 Dark on `glass/field` (WCAG 1.4.11).
+- Disabled: fill `glass/control`, edge `border/default` (style's width), no shadow; label and value `text/disabled`. It reads as "off" in both modes without a grey block (decided 19 Oct 2026).
 
 ## Figma doc drift
 - The set's default variant is `sm`. Always set `Size` explicitly (forms use `md`).
@@ -74,7 +75,7 @@ Single-line input with label, helper, prefix/suffix and validation states.
 - Field — pad space/0 space/12 space/0 space/12 · gap space/8 · radius radius/10 · fill glass/field · stroke border/strong 1.5px · effect elevation/control
   - Value — text label-lg/Regular · fill text/placeholder
 
-**Colour tokens across all variants:** `border/danger` `border/focus` `border/hover` `border/strong` `border/success` `glass/control` `glass/field` `icon/disabled` `icon/primary` `icon/secondary` `surface/disabled` `text/danger` `text/disabled` `text/placeholder` `text/primary` `text/secondary` `text/success`
+**Colour tokens across all variants:** `border/danger` `border/default` `border/focus` `border/hover` `border/strong` `border/success` `glass/control` `glass/field` `icon/disabled` `icon/primary` `icon/secondary` `text/danger` `text/disabled` `text/placeholder` `text/primary` `text/secondary` `text/success`
 **Text styles:** `body-sm/Medium` `body-sm/Regular` `label-lg/Regular` `label-md/Medium` `num-body-sm/Regular` `num-display-md/Medium` `num-label-lg/Regular` · **Effects:** `elevation/control`
 
 ### TextField/Search
