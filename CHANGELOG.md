@@ -45,6 +45,9 @@ Versions follow semver: **major** = breaking (renamed/removed component, token o
 - Top Bar Back and Help are 44×44 Icon Buttons (Top Bar 67 → 71 px tall); Segmented Control `md` is 44 tall.
 - `elevation/primary/shadow-3` Dark `alpha/blue-35` → `alpha/transparent`: Solid lg/xl buttons no longer glow blue in Dark.
 
+### Fixed (Figma docs, 2026-10-21)
+- Typography — Breakpoints (`7:1384`) "Used for" column matches `.claude/rules/typography.md`: `display-lg`, `display-sm` and `caps-lg` are no longer "Reserved", `caps-sm` is the dense-badge exception instead of "Avoid", and sheet titles move from `display-md` to `display-sm`. Doc frame only; no token or style change.
+
 ### Decided
 - Type scale: even sizes with an 11 minimum. `display-lg` (28) and `display-sm` (20) stay; `caps-sm` (10) stays only as a dense-badge exception.
 - Desktop typography (15/13 values) is left until a Desktop product is in scope.
