@@ -34,6 +34,17 @@ Versions follow semver: **major** = breaking (renamed/removed component, token o
 - Marks on brand and danger fills (Checkbox tick/dash, Timeline Done/Error, Option Card check) use `icon/static-white` (4.78:1 / 5.48:1); disabled Checkbox marks use `icon/disabled`.
 - Disabled controls no longer read as active: Switch thumb `surface/neutral-strong`; TextField, TextArea, Dropdown and OTP cells use `glass/control` + `border/default`, no shadow, instead of a solid `surface/disabled` block.
 
+### Added (Figma, 2026-10-19 to 2026-10-20; MF KYC review, `docs/proposals/mf-kyc-ds-updates.md`; published 2026-10-20)
+- New components: `Icon Tile` (Tone × Size 40/64, exposed Glyph), `Summary Card` + `Summary Row`, `List Row` (swappable leading Avatar / Icon Tile), `File Upload` (Empty, Uploading, Uploaded, Error), `Keyboard` (Letters, Numbers) on System Components.
+- Logos page (`274:178`): 67 `logo/<brand>` component sets (Shape Square, Circle; 134 variants) for UPI apps, payment apps and banks. Doc: `docs/foundations/logos.md`.
+- Icons: `icon/brand-google` and `icon/brand-apple` for sign-in buttons.
+- Top Bar `Show leading`, so result screens can hide Back.
+
+### Changed (Figma, 2026-10-19 to 2026-10-21; MF KYC review)
+- Avatar initials `text/brand` → `text/brand-strong` (5.70:1 Light, 8.39:1 Dark on `surface/brand-subtle`).
+- Top Bar Back and Help are 44×44 Icon Buttons (Top Bar 67 → 71 px tall); Segmented Control `md` is 44 tall.
+- `elevation/primary/shadow-3` Dark `alpha/blue-35` → `alpha/transparent`: Solid lg/xl buttons no longer glow blue in Dark.
+
 ### Decided
 - Type scale: even sizes with an 11 minimum. `display-lg` (28) and `display-sm` (20) stay; `caps-sm` (10) stays only as a dense-badge exception.
 - Desktop typography (15/13 values) is left until a Desktop product is in scope.

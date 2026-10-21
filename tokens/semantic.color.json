@@ -1533,7 +1533,7 @@
         "$value": "{alpha.transparent}",
         "$extensions": {
           "modes": {
-            "Dark": "{alpha.blue-35}"
+            "Dark": "{alpha.transparent}"
           }
         }
       }

@@ -18,6 +18,7 @@ The file's link also goes in the header of `prds/<feature>/plan.md`. `/prd-to-sc
 
 | Feature | File | fileKey | Plan |
 |---|---|---|---|
+| MF KYC | [Laabh — MF KYC](https://www.figma.com/design/kwRnjJU3KdW28Wi7gSU0mG) | `kwRnjJU3KdW28Wi7gSU0mG` | [plan](../prds/mf-kyc/plan.md) |
 | KYC onboarding | [Laabh — KYC Onboarding](https://www.figma.com/design/uX1kcZaXFqPT8CHAKZt8Y6/Laabh-KYC-Onboarding) | `uX1kcZaXFqPT8CHAKZt8Y6` | [plan](../prds/kyc-onboarding/plan.md) |
 
 ## Variable collections
@@ -41,6 +42,7 @@ Styles: 99 text styles (incl. doc-only `mono/Regular`), 13 effect styles (`eleva
 | | Typography | `1:4` |
 | | Spacing & Radius | `1:5` |
 | | Icons | `1:6` |
+| | Logos | `274:178` |
 | | Elevation | `1:7` |
 | COMPONENTS | Alert | `49:2` |
 | | Avatar | `1:10` |
@@ -49,11 +51,15 @@ Styles: 99 text styles (incl. doc-only `mono/Regular`), 13 effect styles (`eleva
 | | Buttons | `1:12` |
 | | Checkbox | `1:13` |
 | | Dropdown | `1:14` |
+| | File Upload | `262:3` |
+| | Icon Tile | `259:2` |
+| | List Row | `261:2` |
 | | Option Card | `49:4` |
 | | OTP Input | `49:5` |
 | | Radio | `1:15` |
 | | Segmented Control | `1:16` |
 | | Step Indicator | `1:17` |
+| | Summary Card | `260:2` |
 | | Switch | `1:18` |
 | | System Components | `101:128916` |
 | | Tabs | `1:19` |

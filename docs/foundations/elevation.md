@@ -38,7 +38,7 @@ so the **same style** is a soft black lift in Light and an inner-lit, deeper gla
 | `elevation/card-brand` | 0px 1px 2px #00000008<br>0px 4px 16px #0000000d | 0px 16px 32px #00000059<br>0px 12px 40px #3863ff2e<br>inset 0px 1px 1px #d8ecf833<br>inset 0px 24px 48px #a8d8f50d |
 | `elevation/tile` | 0px 1px 2px #0000000a<br>0px 2px 6px #00000008 | blur 24px<br>0px 8px 24px #0000004d<br>inset 0px 1px 1px #d8ecf824 |
 | `elevation/inset` | none | inset 0px 1px 1px #d8ecf81a |
-| `elevation/primary` | 0px 1px 2px #00000014<br>0px 4px 12px #00000014 | 0px 6px 16px #3863ff59 |
+| `elevation/primary` | 0px 1px 2px #00000014<br>0px 4px 12px #00000014 | none |
 | `elevation/primary-sm` | 0px 1px 2px #00000014<br>0px 2px 6px #0000000d | none |
 | `elevation/logo` | 0px 1px 2px #0000000a | none |
 | `elevation/dock` | 0px -4px 16px #0000000d | blur 24px |

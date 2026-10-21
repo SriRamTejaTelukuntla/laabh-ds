@@ -1,4 +1,4 @@
-# System Components: Status Bar · Home Indicator
+# System Components: Status Bar · Home Indicator · Keyboard
 
 > **Status:** stable · **Since:** v1.0 · **Figma page:** `101:128916`
 
@@ -9,6 +9,7 @@ iOS chrome placed on every full screen so layouts account for the real safe area
 - They are 393 wide in the library. On a 390 canvas set them to **Fill container** (or resize to 390) so nothing overhangs.
 - Colours follow the mode automatically (`icon/primary`, `surface/inverse`).
 - Bottom sheets float above the Home Indicator (8px inset), so it stays visible.
+- **Keyboard** (beta, `268:200`, key `a300befb2284dc705799bbbe86aa493adb597869`): show it on input screens with the keyboard up. `Type=Numbers` for OTP, mobile, PIN code, account number, share %; `Type=Letters` for names, email, PAN, address. Full width, directly above the Home Indicator; the footer CTA sits right above it. It's for placement only: annotate the real input type (`AN-09`).
 
 ## Figma doc drift
 - Status Bar `Time` text is unstyled (SF Pro system font, intentional for iOS chrome). Exempt from `/ds-audit`.

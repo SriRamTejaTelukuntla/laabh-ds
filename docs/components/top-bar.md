@@ -15,14 +15,15 @@ The header for onboarding, KYC and other step-by-step flows: back, step caption,
 - Set `Stage` to the current stage (1–5): earlier stages show Completed, later ones Upcoming. No nested overrides.
 - Keep the `Step` caption in sync with it ("Step 2 of 5 · Identity" = `Stage=2`). The caption is text, so it doesn't follow `Stage` by itself.
 - KYC uses **5 stages**: Contact · Identity · Profile · Bank · Review.
-- Leading = back (`icon/arrow-left`), trailing = help (`icon/circle-help`); both Ghost Neutral Icon Buttons (md 40). Hide trailing with `Show trailing` when there's no help.
+- Leading = back (`icon/arrow-left`), trailing = help (`icon/circle-help`); both Ghost Neutral Icon Buttons sized 44×44 (44 pt targets). Hide trailing with `Show trailing` when there's no help.
+- Result screens after an irreversible step (Submitted) hide Back with `Show leading` = false, so Back can't look like it reopens the step.
 - 393 wide in the library. On a 390 canvas set it to Fill container.
 
 ## Content
 - Caption: "Step n of N · <Stage>". Title: what this screen does, 1–3 words ("Verify mobile").
 
 ## Figma doc drift
-- none
+- The Reference frame still says the actions are "Icon Button Ghost Neutral md (40)"; they are 44×44 since 19 Oct 2026 (`docs/proposals/mf-kyc-ds-updates.md`).
 
 <!-- AUTO:START (generated from Figma by scripts/figma/inspect-components.js; do not edit by hand) -->
 ### Top Bar
@@ -32,7 +33,7 @@ The header for onboarding, KYC and other step-by-step flows: back, step caption,
 | Node ID | `51:43` (page `49:7`) |
 | Key | `62be1b1e192159c77b9853dec8d1cfb8f635a49c` |
 | Variants | 6 · default: `Progress=On, Stage=1` |
-| Default size | 393×67 |
+| Default size | 393×71 |
 
 | Property | Type | Values / default |
 |---|---|---|
@@ -40,6 +41,7 @@ The header for onboarding, KYC and other step-by-step flows: back, step caption,
 | Step | text | Step 1 of 5 · Contact |
 | Show step | boolean | true |
 | Show trailing | boolean | true |
+| Show leading | boolean | true |
 | Progress | variant | On, Off (default On) |
 | Stage | variant | 1, 2, 3, 4, 5 (default 1) |
 

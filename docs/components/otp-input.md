@@ -6,7 +6,8 @@ One-time-code entry for phone, email, eSign and nominee verification.
 
 ## Use it for
 - `Length=4` for SMS/email OTPs in Laabh flows; `6` where a partner (e.g. Aadhaar eSign) requires it.
-- Show states: `Empty`, `Typing` (one active cell), `Filled`, `Error`, `Success`, `Disabled` (verification locked).
+- Show states: `Empty`, `Typing` (one active cell), `Filled`, `Error`, `Success`, `Disabled` (verification locked after 3 wrong attempts).
+- Helper row text is set through the `Helper`, `Timer`, `Error message`, `Success message` and `Disabled message` properties; toggle the row with `Show helper` and the countdown with `Show timer`.
 
 ## Rules
 - Behaviour to annotate in the design: auto-advance per digit, auto-submit on the last, paste fills all cells, read SMS automatically on Android where allowed.
@@ -20,7 +21,7 @@ One-time-code entry for phone, email, eSign and nominee verification.
 - Cell edges are `border/strong` (3:1 in both modes). Disabled cells match disabled fields: `glass/control` fill, `border/default` edge, no shadow. The `Disabled message` stays `text/secondary`: it's essential, so never `text/disabled`.
 
 ## Figma doc drift
-- none. The helper row is `Helper` (`body-sm/Regular`) + `Timer` (`num-body-sm/Regular`); Error, Success and Disabled show their own message property (`body-sm/Medium` for Error and Success).
+- none (Reference frame corrected 16 Oct 2026; Figma checked 21 Oct 2026). The helper row is two text nodes: `Helper` in `body-sm/Regular` and `Timer` in `num-body-sm/Regular` ("Resend OTP in" + "0:24"); errors, success and the disabled message use `body-sm/Medium`.
 
 <!-- AUTO:START (generated from Figma by scripts/figma/inspect-components.js; do not edit by hand) -->
 ### OTP Input
@@ -55,8 +56,8 @@ One-time-code entry for phone, email, eSign and nominee verification.
   - Helper — text body-sm/Regular · fill text/secondary
   - Timer — text num-body-sm/Regular · fill text/secondary
 
-**Colour tokens across all variants:** `border/danger` `border/default` `border/focus` `border/strong` `border/success` `glass/control` `glass/field` `text/danger` `text/disabled` `text/primary` `text/secondary` `text/success`
-**Text styles:** `body-sm/Medium` `body-sm/Regular` `num-body-sm/Regular` `num-display-md/Medium` · **Effects:** `elevation/control`
+**Colour tokens across all variants:** `border/danger` `border/default` `border/focus` `border/strong` `border/success` `glass/control` `glass/field` `text/danger` `text/secondary` `text/success`
+**Text styles:** `body-sm/Medium` `body-sm/Regular` `num-body-sm/Regular` · **Effects:** `elevation/control`
 
 ### OTP Cell
 
