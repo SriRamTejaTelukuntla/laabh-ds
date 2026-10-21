@@ -2,8 +2,8 @@
 
 Usage: python3 scripts/fingerprint.py [figma-result.json]
 Without an argument it prints the repo fingerprint. With one, it prints only what differs.
-Components that only appear in prose (`Name` in backticks anywhere in docs/) and `Doc / *` page helpers
-are not reported as missing.
+Components that only appear in prose (`Name` in backticks anywhere in docs/), `logo/<brand>` sets whose brand
+is listed in docs/foundations/logos.md, and `Doc / *` page helpers are not reported as missing.
 """
 import json
 import re
@@ -101,11 +101,13 @@ def diff(figma):
             out.append(f"effect {k}: repo {r['effects'].get(k)} figma {figma['effects'].get(k)}")
     seen = set()
     mentioned = "\n".join(d.read_text() for d in (ROOT / "docs").rglob("*.md"))
+    logos = (ROOT / "docs" / "foundations" / "logos.md").read_text()
     for name, key, variants, sig, page, nid in figma["components"]:
         seen.add(name)
         rc = r["components"].get(name)
-        if not rc and (name.startswith("Doc / ") or f"`{name}`" in mentioned):
-            continue  # doc-page helpers, or documented in prose outside an AUTO block
+        if not rc and (name.startswith("Doc / ") or f"`{name}`" in mentioned
+                       or name.startswith("logo/") and f"`{name[5:]}`" in logos):
+            continue  # doc-page helpers, documented in prose outside an AUTO block, or a brand listed in logos.md
         if not rc:
             out.append(f"component NOT IN DOCS: {name} ({variants} variants) page '{page}' id {nid}")
         elif rc != [key, variants, sig]:
