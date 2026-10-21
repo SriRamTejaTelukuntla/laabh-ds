@@ -7,10 +7,10 @@ Multi-line free text (feedback, reason for request, address line if long).
 ## Rules
 - Show a count (`Show count`, `Count` "0/280" in `num-body-sm`) whenever there's a limit.
 - Never for numbers, dates, amounts or anything with a format → TextField / Dropdown.
-- Same label/helper/error behaviour as TextField. Use the same `Style` as the other fields in the form.
+- Same label/helper/error/disabled behaviour as TextField. Use the same `Style` as the other fields in the form.
 
 ## Figma doc drift
-- none (Reference frame corrected 16 Oct 2026)
+- Edges are `border/strong` like TextField. `State=Hover` keeps `border/hover` (Filled, 2.47:1 in Light) and `icon/secondary` (Outline) as its edge: iOS and Android don't hover, so it stays until web is in scope (decided 19 Oct 2026).
 
 <!-- AUTO:START (generated from Figma by scripts/figma/inspect-components.js; do not edit by hand) -->
 ### TextArea
@@ -39,11 +39,11 @@ Multi-line free text (feedback, reason for request, address line if long).
 
 - Label row — gap space/2
   - Label — text body-sm/Medium · fill text/secondary
-- Field — pad space/10 space/16 space/10 space/16 · radius radius/12 · fill glass/field · stroke glass/hairline 1.5px · effect elevation/control
+- Field — pad space/10 space/16 space/10 space/16 · radius radius/12 · fill glass/field · stroke border/strong 1.5px · effect elevation/control
   - Value — text label-md/Regular · fill text/placeholder
 - Helper row — gap space/8
   - Helper — text body-sm/Regular · fill text/secondary
 
-**Colour tokens across all variants:** `border/danger` `border/focus` `border/hover` `glass/control` `glass/edge` `glass/field` `glass/hairline` `icon/secondary` `surface/disabled` `text/danger` `text/disabled` `text/placeholder` `text/primary` `text/secondary`
+**Colour tokens across all variants:** `border/danger` `border/default` `border/focus` `border/hover` `border/strong` `glass/control` `glass/field` `icon/secondary` `text/danger` `text/disabled` `text/placeholder` `text/primary` `text/secondary`
 **Text styles:** `body-sm/Medium` `body-sm/Regular` `label-md/Regular` `num-body-sm/Regular` · **Effects:** `elevation/control`
 <!-- AUTO:END -->

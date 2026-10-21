@@ -21,7 +21,7 @@ Switch between 2–3 mutually exclusive views of the same content, in place.
 - The selected segment uses a thumb (fill + `elevation/thumb`) **and** a stronger label colour.
 
 ## Figma doc drift
-- `md` controls are 44 tall (segments 36) since 19 Oct 2026, so each option is a 44 pt target; `sm` (32) stays for dense, non-primary filters. 
+- `md` controls are 44 tall since 19 Oct 2026; `sm` stays for dense, non-primary filters. Open: the `Segment` `md` variant is 32 tall in Figma, while the proposal says segments are 38 and this note said 36. Confirm each option has a 44 pt tap area (`docs/proposals/mf-kyc-ds-updates.md`).
 
 <!-- AUTO:START (generated from Figma by scripts/figma/inspect-components.js; do not edit by hand) -->
 ### Segment

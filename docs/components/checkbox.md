@@ -17,13 +17,15 @@ Independent on/off choices and consents that take effect when the form is submit
 - `Required` shows a `text/danger` asterisk. Use it on mandatory consents.
 - Size `sm` (16 control) in dense forms, `md` (20 control) for standalone consents.
 - Long legal text: put the summary in `Label` and the detail in `Description`, or link to a sheet.
+- In screens set it to **Fill container**: `Label` and `Description` then wrap. The master keeps its narrow default width, so a hugging instance doesn't wrap.
 
 ## Accessibility
 - Pad the whole row to a 44pt hit area; the label is tappable.
 - Focus ring: 2px `focus/ring`, 2px gap.
+- The tick and dash are `icon/static-white` on the brand fill (4.78:1 both modes). Disabled uses `icon/disabled`, like the label, so it doesn't read as active (disabled controls are exempt from 3:1).
 
 ## Figma doc drift
-- none (Reference frame corrected 16 Oct 2026)
+- With `Required` on and the component filling the width, the asterisk sits at the end of the label's first line (the label fills the row so it can wrap). Accepted 19 Oct 2026.
 
 <!-- AUTO:START (generated from Figma by scripts/figma/inspect-components.js; do not edit by hand) -->
 ### Checkbox
@@ -58,7 +60,7 @@ Independent on/off choices and consents that take effect when the form is submit
   - Label row — gap space/2
     - Label — text label-md/Regular · fill text/primary
 
-**Colour tokens across all variants:** `border/brand` `border/strong` `focus/ring` `glass/field` `icon/primary` `surface/brand` `surface/brand-hover` `surface/disabled` `text/danger` `text/disabled` `text/primary` `text/secondary`
+**Colour tokens across all variants:** `border/brand` `border/strong` `focus/ring` `glass/field` `icon/disabled` `icon/static-white` `surface/brand` `surface/brand-hover` `surface/disabled` `text/danger` `text/disabled` `text/primary` `text/secondary`
 **Text styles:** `body-lg/Regular` `body-sm/Regular` `label-md/Regular` · **Effects:** —
 
 ### Checkbox Group

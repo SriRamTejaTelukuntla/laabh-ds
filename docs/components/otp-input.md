@@ -11,16 +11,17 @@ One-time-code entry for phone, email, eSign and nominee verification.
 
 ## Rules
 - Behaviour to annotate in the design: auto-advance per digit, auto-submit on the last, paste fills all cells, read SMS automatically on Android where allowed.
-- Resend unlocks after 30 s, up to 3 resends. Show a countdown ("Resend in 0:24") in the helper row.
-- 3 wrong attempts lock verification for 30 minutes. Show the unlock time, never a blank error.
+- Resend unlocks after 30 s, up to 3 resends. Show the countdown in the helper row: `Helper` "Resend OTP in" + `Timer` "0:24". Turn `Show timer` off when there's no countdown.
+- Wrong code: `State=Error` with `Error message` saying what happened and the attempts left.
+- 3 wrong attempts lock verification for 30 minutes: `State=Disabled` with `Disabled message` giving the unlock time ("Try again at 11:42 am"), never a blank error.
 - Centre the cells under the screen title. Put the destination ("Sent to +91 98••• ••210", with an Edit ghost button) above the cells.
 
 ## Accessibility
 - Digits use `num-display-md/Medium`. Error pairs `border/danger` with helper text that says what to do.
+- Cell edges are `border/strong` (3:1 in both modes). Disabled cells match disabled fields: `glass/control` fill, `border/default` edge, no shadow. The `Disabled message` stays `text/secondary`: it's essential, so never `text/disabled`.
 
 ## Figma doc drift
 - none (Reference frame corrected 16 Oct 2026; Figma checked 21 Oct 2026). The helper row is two text nodes: `Helper` in `body-sm/Regular` and `Timer` in `num-body-sm/Regular` ("Resend OTP in" + "0:24"); errors, success and the disabled message use `body-sm/Medium`.
-- Cell edges use `border/strong` (Empty, Default, Filled) so they meet the 3:1 UI-part contrast; `Disabled` uses `glass/control` + `border/default` with no shadow.
 
 <!-- AUTO:START (generated from Figma by scripts/figma/inspect-components.js; do not edit by hand) -->
 ### OTP Input

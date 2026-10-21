@@ -19,15 +19,17 @@ Single-line input with label, helper, prefix/suffix and validation states.
 - `Outline` on plain pages; `Filled` (glass) inside cards. Don't mix styles within a form.
 - Prefix ₹ via `Show prefix`, never typed into the value. Amounts use Indian grouping: ₹1,84,250.75.
 - Phone numbers: `+91` as prefix; PAN uppercase; dates use a picker pattern, not free text.
-- Show errors only after the person leaves the field. Error = `State=Error` + helper text with ⚠ and words.
+- Show errors only after the person leaves the field. Error = `State=Error` + `Show helper` on, with `Helper` = ⚠ and what to do. In Error the helper is `text/danger`, in Success `text/success` (both `body-sm/Medium`).
 - Stack fields `space/24` apart (the form Body gap), heading included.
 
 ## Accessibility
 - Never rely on red alone: the error message carries ⚠ and words. Labels stay visible for screen readers and memory.
+- Field edges are `border/strong`: 3.81:1 Light, 3.41:1 Dark on `glass/field` (WCAG 1.4.11).
+- Disabled: fill `glass/control`, edge `border/default` (style's width), no shadow; label and value `text/disabled`. It reads as "off" in both modes without a grey block (decided 19 Oct 2026).
 
 ## Figma doc drift
 - The set's default variant is `sm`. Always set `Size` explicitly (forms use `md`).
-- **Accessibility check needed:** field edges use `glass/hairline` (navy 8% in Light), well under the 3:1 contrast WCAG 2.2 asks for input borders. Consider `border/strong` for the Outline style.
+- `State=Hover` keeps `border/hover` (Filled, 2.47:1 in Light) and `icon/secondary` (Outline) as its edge: iOS and Android don't hover, so it stays until web is in scope (decided 19 Oct 2026).
 
 <!-- AUTO:START (generated from Figma by scripts/figma/inspect-components.js; do not edit by hand) -->
 ### TextField
@@ -70,10 +72,10 @@ Single-line input with label, helper, prefix/suffix and validation states.
 
 - Label row — gap space/2
   - Label — text body-sm/Medium · fill text/secondary
-- Field — pad space/0 space/12 space/0 space/12 · gap space/8 · radius radius/10 · fill glass/field · stroke glass/hairline 1.5px · effect elevation/control
+- Field — pad space/0 space/12 space/0 space/12 · gap space/8 · radius radius/10 · fill glass/field · stroke border/strong 1.5px · effect elevation/control
   - Value — text label-lg/Regular · fill text/placeholder
 
-**Colour tokens across all variants:** `border/danger` `border/focus` `border/hover` `border/success` `glass/control` `glass/edge` `glass/field` `glass/hairline` `icon/disabled` `icon/primary` `icon/secondary` `surface/disabled` `text/danger` `text/disabled` `text/placeholder` `text/primary` `text/secondary` `text/success`
+**Colour tokens across all variants:** `border/danger` `border/default` `border/focus` `border/hover` `border/strong` `border/success` `glass/control` `glass/field` `icon/disabled` `icon/primary` `icon/secondary` `text/danger` `text/disabled` `text/placeholder` `text/primary` `text/secondary` `text/success`
 **Text styles:** `body-sm/Medium` `body-sm/Regular` `label-lg/Regular` `label-md/Medium` `num-body-sm/Regular` `num-display-md/Medium` `num-label-lg/Regular` · **Effects:** `elevation/control`
 
 ### TextField/Search
@@ -89,7 +91,7 @@ Single-line input with label, helper, prefix/suffix and validation states.
 
 - TextField → `TextField` — gap space/6
 
-**Colour tokens across all variants:** `glass/control` `glass/edge` `icon/primary` `icon/secondary` `text/danger` `text/placeholder` `text/primary` `text/secondary`
+**Colour tokens across all variants:** `border/strong` `glass/control` `icon/primary` `icon/secondary` `text/danger` `text/placeholder` `text/primary` `text/secondary`
 **Text styles:** `body-sm/Medium` `body-sm/Regular` `label-lg/Regular` `num-body-sm/Regular` `num-label-lg/Regular` · **Effects:** `elevation/control`
 
 ### TextField/Amount
@@ -109,6 +111,6 @@ Single-line input with label, helper, prefix/suffix and validation states.
   - Button → `Button` — pad space/0 space/10 space/0 space/10 · gap space/4 · radius radius/8 · fill glass/control · stroke glass/hairline 1px · effect elevation/control
   - Button → `Button` — pad space/0 space/10 space/0 space/10 · gap space/4 · radius radius/8 · fill glass/control · stroke glass/hairline 1px · effect elevation/control
 
-**Colour tokens across all variants:** `glass/control` `glass/field` `glass/hairline` `icon/primary` `icon/secondary` `text/danger` `text/primary` `text/secondary`
+**Colour tokens across all variants:** `border/strong` `glass/control` `glass/field` `glass/hairline` `icon/primary` `icon/secondary` `text/danger` `text/primary` `text/secondary`
 **Text styles:** `body-sm/Regular` `body-sm/Semibold` `label-lg/Regular` `label-md/Medium` `num-body-sm/Regular` `num-display-md/Medium` · **Effects:** `elevation/control`
 <!-- AUTO:END -->

@@ -20,13 +20,38 @@ Versions follow semver: **major** = breaking (renamed/removed component, token o
 - New text style `mono/Regular` (JetBrains Mono 11/14, bound to `font/family/mono` and the caption size/line-height tokens) for documentation labels.
 - 1,784 unstyled 10px JetBrains Mono labels in the DS doc frames are now bound to `mono/Regular` (11px). No overflow found.
 
+### Added (Figma, 2026-10-19)
+- Top Bar `Stage` variant (1–5): earlier stages Completed, the chosen one Current, later ones Upcoming.
+- OTP Input `Helper` + `Timer` (`num-body-sm`, `Show timer`), `Error message`, `Success message`, `Disabled message`; `State=Disabled` on OTP Input and OTP Cell.
+- `Sheet Content/Prefill consent`: the `Consent` checkbox is an exposed instance, so screens can show it ticked.
+
+### Fixed (Figma, 2026-10-19; PRs #7, #9; from the first `/prd-to-screens` run)
+- Field edges meet WCAG 1.4.11: TextField, TextArea, Dropdown (Default, Filled) and OTP Cell (Empty, Filled) use `border/strong` instead of `glass/hairline` / `glass/edge` (1.16:1 → 3.81:1 Light, 3.41:1 Dark).
+- `text/placeholder` Dark `frost/200` → `frost/400`, so empty fields no longer look filled (7.68:1 on `glass/field`).
+- `Sheet Content/Prefill consent` no longer ships a pre-ticked consent.
+- The stray `Message` layer is gone from TextField Error/Success, Dropdown Error/Success and TextArea Error; the helper row carries the message in `text/danger` / `text/success`.
+- Checkbox, Radio and Switch labels and descriptions wrap when the instance is Fill container.
+- Marks on brand and danger fills (Checkbox tick/dash, Timeline Done/Error, Option Card check) use `icon/static-white` (4.78:1 / 5.48:1); disabled Checkbox marks use `icon/disabled`.
+- Disabled controls no longer read as active: Switch thumb `surface/neutral-strong`; TextField, TextArea, Dropdown and OTP cells use `glass/control` + `border/default`, no shadow, instead of a solid `surface/disabled` block.
+
+### Added (Figma, 2026-10-19 to 2026-10-20; MF KYC review, `docs/proposals/mf-kyc-ds-updates.md`; not published)
+- New components: `Icon Tile` (Tone × Size 40/64, exposed Glyph), `Summary Card` + `Summary Row`, `List Row` (swappable leading Avatar / Icon Tile), `File Upload` (Empty, Uploading, Uploaded, Error), `Keyboard` (Letters, Numbers) on System Components.
+- Logos page (`274:178`): 67 `logo/<brand>` component sets (Shape Square, Circle; 134 variants) for UPI apps, payment apps and banks. Doc: `docs/foundations/logos.md`.
+- Icons: `icon/brand-google` and `icon/brand-apple` for sign-in buttons.
+- Top Bar `Show leading`, so result screens can hide Back.
+
+### Changed (Figma, 2026-10-19 to 2026-10-21; MF KYC review)
+- Avatar initials `text/brand` → `text/brand-strong` (5.70:1 Light, 8.39:1 Dark on `surface/brand-subtle`).
+- Top Bar Back and Help are 44×44 Icon Buttons (Top Bar 67 → 71 px tall); Segmented Control `md` is 44 tall.
+- `elevation/primary/shadow-3` Dark `alpha/blue-35` → `alpha/transparent`: Solid lg/xl buttons no longer glow blue in Dark.
+
 ### Decided
 - Type scale: even sizes with an 11 minimum. `display-lg` (28) and `display-sm` (20) stay; `caps-sm` (10) stays only as a dense-badge exception.
 - Desktop typography (15/13 values) is left until a Desktop product is in scope.
 
 ### Known issues (DS file)
 - Reference-frame notes in Figma disagree with component bindings on 12 components (see "Figma doc drift" in each doc).
-- Unbound values: OTP Input helper text (unstyled), Step radius 999, Timeline paddings and connector radius.
+- Unbound values: Step radius 999, Timeline paddings and connector radius.
 - Set defaults: Button / Icon Button default to Neutral · xs, TextField to sm.
 - App Header page sits after ARCHIVE in the page list.
 - `Sheet Content/*` product components live on Selected Screens instead of PRODUCT COMPONENTS.

@@ -5,18 +5,18 @@
 The header for onboarding, KYC and other step-by-step flows: back, step caption, title, help, and a stage bar.
 
 ## Use it for
-- Every screen of a multi-step flow. `Progress=On` while in the flow; `Progress=Off` on result screens (Submitted, Activated).
+- Every screen of a multi-step flow. `Progress=On` with `Stage` while in the flow; `Progress=Off` on result screens (Submitted, Activated).
 
 ## Don't use it for
 - Main app tabs and their detail screens → App Header.
 
 ## Rules
 - No fill: it sits on the page atmosphere directly under the Status Bar.
-- Keep the step caption and the stage bar in sync ("Step 2 of 5 · Identity" = stage 2 Current).
+- Set `Stage` to the current stage (1–5): earlier stages show Completed, later ones Upcoming. No nested overrides.
+- Keep the `Step` caption in sync with it ("Step 2 of 5 · Identity" = `Stage=2`). The caption is text, so it doesn't follow `Stage` by itself.
 - KYC uses **5 stages**: Contact · Identity · Profile · Bank · Review.
 - Leading = back (`icon/arrow-left`), trailing = help (`icon/circle-help`); both Ghost Neutral Icon Buttons sized 44×44 (44 pt targets). Hide trailing with `Show trailing` when there's no help.
 - Result screens after an irreversible step (Submitted) hide Back with `Show leading` = false, so Back can't look like it reopens the step.
-- Set the stage with `Stage` (1–5) on `Progress=On`.
 - 393 wide in the library. On a 390 canvas set it to Fill container.
 
 ## Content

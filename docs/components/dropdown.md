@@ -13,7 +13,7 @@ A field that opens a menu to pick one value from a list.
 - Actions (Delete, Exit) → buttons or a sheet. A selection menu never holds actions.
 
 ## Rules
-- The trigger matches TextField: same sizes (`sm`/`md`/`lg`), same `Outline`/`Filled` styles, same label/helper slots. Use the same size as the other fields in the form.
+- The trigger matches TextField (including the Disabled look): same sizes (`sm`/`md`/`lg`), same `Outline`/`Filled` styles, same label/helper slots. Use the same size as the other fields in the form.
 - `Value` shows the placeholder ("Select") until chosen. The state then becomes `Filled`.
 - Selected item: `Selection=Selected` (check + `text/selected`).
 - `Trailing` on items is for a value (e.g. a price `₹1,386.40` in `num-body-sm`).
@@ -22,7 +22,7 @@ A field that opens a menu to pick one value from a list.
 - Error state pairs `border/danger` with helper text that says how to fix it.
 
 ## Figma doc drift
-- none (Reference frame corrected 16 Oct 2026)
+- Edges are `border/strong` like TextField. `State=Hover` keeps `border/hover` (Filled, 2.47:1 in Light) and `icon/secondary` (Outline) as its edge: iOS and Android don't hover, so it stays until web is in scope (decided 19 Oct 2026).
 
 <!-- AUTO:START (generated from Figma by scripts/figma/inspect-components.js; do not edit by hand) -->
 ### Dropdown
@@ -58,11 +58,11 @@ A field that opens a menu to pick one value from a list.
 
 - Label row — gap space/2
   - Label — text body-sm/Medium · fill text/secondary
-- Field — pad space/0 space/16 space/0 space/16 · gap space/8 · radius radius/12 · fill glass/field · stroke glass/hairline 1.5px · effect elevation/control
+- Field — pad space/0 space/16 space/0 space/16 · gap space/8 · radius radius/12 · fill glass/field · stroke border/strong 1.5px · effect elevation/control
   - Value — text label-lg/Regular · fill text/placeholder
   - Trailing icon → `Icon`
 
-**Colour tokens across all variants:** `border/danger` `border/focus` `border/hover` `border/success` `glass/control` `glass/edge` `glass/field` `glass/hairline` `icon/brand` `icon/disabled` `icon/primary` `icon/secondary` `surface/disabled` `text/danger` `text/disabled` `text/placeholder` `text/primary` `text/secondary` `text/success`
+**Colour tokens across all variants:** `border/danger` `border/default` `border/focus` `border/hover` `border/strong` `border/success` `glass/control` `glass/field` `icon/brand` `icon/disabled` `icon/primary` `icon/secondary` `text/danger` `text/disabled` `text/placeholder` `text/primary` `text/secondary` `text/success`
 **Text styles:** `body-sm/Medium` `body-sm/Regular` `label-lg/Regular` `label-md/Medium` · **Effects:** `elevation/control`
 
 ### Dropdown Item

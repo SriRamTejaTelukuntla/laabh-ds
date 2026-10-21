@@ -18,4 +18,5 @@ KYC uses 5 stages in the Top Bar: **Contact · Identity · Profile · Bank · Re
 - Every step screen: Top Bar with the stage and "Step n of N", footer CTA `lg`.
 - Waiting states (Verifying, setting up) show what's happening and the expected time; use Timeline for multi-step waits.
 - Regulatory consents are Checkboxes, never pre-ticked, with the summary in the label and detail in a sheet.
+- `Sheet Content/Prefill consent` ships with its `Consent` checkbox unticked. To show it ticked (after the person taps), set `Selection` on the exposed `Consent` instance; never change the default.
 - Failures always offer the next step (retry, alternative method, contact support).

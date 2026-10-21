@@ -76,7 +76,7 @@ In plain words, short:
 When fixing (after an OK): the feature's file only, one screen per call, screenshot Light and Dark after, re-run the audit on that frame.
 
 ## Hand-offs from /design-review
-`/design-review` lists "Contrast to measure" pairs and "Raw values" nodes (`docs/ux/ux-governance.md` §9). Run the audit on the frames those come from, then answer
+`/design-review` lists pairs and nodes "to measure" under *Notes for the team* (`docs/ux/ux-governance.md` §9). Run the audit on the frames those come from, then answer
 each pair from the report's "Contrast pairs measured" table (ratio, pass or fail, per mode) and each node from the findings. A pair not in the table wasn't rendered on those frames: say so.
 
 ## How it measures
