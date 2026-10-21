@@ -24,8 +24,8 @@ Start here to find the right component. Then open its doc in `docs/components/`:
 | Dropdown Menu | The open menu surface | stable | `1:14` | `29:945` | `fb61ecda039901b5f278b810af61aa6bf8e66ea7` | Content: Fit, Scroll |
 | Icon | Size and stroke for any `icon/*` glyph (inside every DS icon) | stable | `1:6` | `9:194` | `95ec73f49124285338b2b89dc65fc610480657ac` | Size: 10, 12, 14, 16, 20, 24, 28, 32 · Glyph: instance swap |
 | Option Card | Large selectable choice (single/multi) | stable | `49:4` | `53:120` | `6c20d02889cc7f90f7266abc2563ce1042d2869b` | Selection · Control: Radio, Check, None |
-| OTP Input | One-time code entry | stable | `49:5` | `52:158` | `0cb4798c487c4f7cd3cc39cec53d986ab3d14333` | Length: 4, 6 · State: Empty, Typing, Filled, Error, Success |
-| OTP Cell | Single OTP digit (part of OTP Input) | stable | `49:5` | `52:13` | `e0e8f1261050022b955612ce4b10e83869dfe1e0` | State |
+| OTP Input | One-time code entry | stable | `49:5` | `52:158` | `0cb4798c487c4f7cd3cc39cec53d986ab3d14333` | Length: 4, 6 · State: Empty, Typing, Filled, Error, Success, Disabled · Helper/Timer/message text |
+| OTP Cell | Single OTP digit (part of OTP Input) | stable | `49:5` | `52:13` | `e0e8f1261050022b955612ce4b10e83869dfe1e0` | State: Empty, Active, Filled, Error, Success, Disabled |
 | Radio | Single choice in a short list | stable | `1:15` | `21:118` | `2c88d3e9a1220fc01673502703f3e34de8c687cd` | Selection · State · Size: sm, md |
 | Radio Group | Group of radios with legend/helper/error | stable | `1:15` | `21:189` | `6bcbb8e7923c093b0ec01b4d5d1c7881becafd62` | Direction: Vertical, Horizontal |
 | Screen Atmosphere | Backdrop of every full screen (grid; spotlight in Dark) | beta | `173:92320` | `173:92321` (component) | `c3c521d2c0d86f6869761556385c954cc83b517f` | none (mode-aware) |
