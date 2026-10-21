@@ -48,6 +48,9 @@ Versions follow semver: **major** = breaking (renamed/removed component, token o
 ### Fixed (Figma docs, 2026-10-21)
 - Typography — Breakpoints (`7:1384`) "Used for" column matches `.claude/rules/typography.md`: `display-lg`, `display-sm` and `caps-lg` are no longer "Reserved", `caps-sm` is the dense-badge exception instead of "Avoid", and sheet titles move from `display-md` to `display-sm`. Doc frame only; no token or style change.
 
+### Fixed (scripts, 2026-10-21)
+- `/ds-sync` drift check no longer reports 68 false flags. `scripts/figma/fingerprint.js` checks the `Icon` set again (it skipped the whole Icons page; now it skips only the `icon/*` glyphs), and `scripts/fingerprint.py` counts a `logo/<brand>` set as documented when its brand is listed in `docs/foundations/logos.md`. No Figma, token or doc change.
+
 ### Decided
 - Type scale: even sizes with an 11 minimum. `display-lg` (28) and `display-sm` (20) stay; `caps-sm` (10) stays only as a dense-badge exception.
 - Desktop typography (15/13 values) is left until a Desktop product is in scope.

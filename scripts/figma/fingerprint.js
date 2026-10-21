@@ -60,9 +60,10 @@ for (const s of await figma.getLocalEffectStylesAsync()) {
 await figma.loadAllPagesAsync();
 const components = [];
 for (const p of figma.root.children) {
-  if (/Sandbox|Icons/.test(p.name)) continue;
+  if (/Sandbox/.test(p.name)) continue;
   for (const n of p.findAllWithCriteria({ types: ['COMPONENT_SET', 'COMPONENT'] })) {
     if (n.type === 'COMPONENT' && n.parent.type === 'COMPONENT_SET') continue;
+    if (/^icon(-fill)?\//.test(n.name)) continue; // Lucide glyphs are documented in foundations/icons.md, not one by one
     let a = n.parent, dark = false; while (a && a.type !== 'PAGE') { if (/Dark/.test(a.name)) dark = true; a = a.parent; }
     if (dark) continue;
     const defs = n.componentPropertyDefinitions || {};
