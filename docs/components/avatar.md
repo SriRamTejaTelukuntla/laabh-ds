@@ -27,8 +27,8 @@ A circular image, initials or icon representing a person or a company.
 - Logo + name row pattern: Avatar 36 · gap 12 · name `label-md/Medium` · company `body-sm/Regular` in `text/secondary`.
 
 ## Accessibility
-- Initials use `text/brand-strong` on `surface/brand-subtle` (5.70:1 Light, 8.39:1 Dark) since 19 Oct 2026. When a name sits next to the avatar, mark the avatar decorative (`AN-08`).
-- Decorative when a name sits next to it. Otherwise the layer name carries the person's/company's name.
+- Initials use `text/brand-strong` on `surface/brand-subtle` (5.70:1 Light, 8.39:1 Dark) since 19 Oct 2026.
+- Decorative when a name sits next to it (`AN-08`). Otherwise the layer name carries the person's/company's name.
 
 ## Figma doc drift
 - none

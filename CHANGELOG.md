@@ -34,7 +34,7 @@ Versions follow semver: **major** = breaking (renamed/removed component, token o
 - Marks on brand and danger fills (Checkbox tick/dash, Timeline Done/Error, Option Card check) use `icon/static-white` (4.78:1 / 5.48:1); disabled Checkbox marks use `icon/disabled`.
 - Disabled controls no longer read as active: Switch thumb `surface/neutral-strong`; TextField, TextArea, Dropdown and OTP cells use `glass/control` + `border/default`, no shadow, instead of a solid `surface/disabled` block.
 
-### Added (Figma, 2026-10-19 to 2026-10-20; MF KYC review, `docs/proposals/mf-kyc-ds-updates.md`; not published)
+### Added (Figma, 2026-10-19 to 2026-10-20; MF KYC review, `docs/proposals/mf-kyc-ds-updates.md`; published 2026-10-20)
 - New components: `Icon Tile` (Tone × Size 40/64, exposed Glyph), `Summary Card` + `Summary Row`, `List Row` (swappable leading Avatar / Icon Tile), `File Upload` (Empty, Uploading, Uploaded, Error), `Keyboard` (Letters, Numbers) on System Components.
 - Logos page (`274:178`): 67 `logo/<brand>` component sets (Shape Square, Circle; 134 variants) for UPI apps, payment apps and banks. Doc: `docs/foundations/logos.md`.
 - Icons: `icon/brand-google` and `icon/brand-apple` for sign-in buttons.
