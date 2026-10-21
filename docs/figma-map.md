@@ -41,6 +41,7 @@ Styles: 99 text styles (incl. doc-only `mono/Regular`), 13 effect styles (`eleva
 | | Typography | `1:4` |
 | | Spacing & Radius | `1:5` |
 | | Icons | `1:6` |
+| | Logos | `274:178` |
 | | Elevation | `1:7` |
 | COMPONENTS | Alert | `49:2` |
 | | Avatar | `1:10` |
