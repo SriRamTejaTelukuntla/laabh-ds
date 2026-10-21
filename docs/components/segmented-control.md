@@ -21,7 +21,7 @@ Switch between 2–3 mutually exclusive views of the same content, in place.
 - The selected segment uses a thumb (fill + `elevation/thumb`) **and** a stronger label colour.
 
 ## Figma doc drift
-- none
+- `md` controls are 44 tall (segments 36) since 19 Oct 2026, so each option is a 44 pt target; `sm` (32) stays for dense, non-primary filters. 
 
 <!-- AUTO:START (generated from Figma by scripts/figma/inspect-components.js; do not edit by hand) -->
 ### Segment
@@ -50,7 +50,7 @@ Switch between 2–3 mutually exclusive views of the same content, in place.
 
 - Label — text body-sm/Medium · fill text/secondary
 
-**Colour tokens across all variants:** `focus/ring` `glass/selected` `glass/thumb` `icon/disabled` `icon/primary` `icon/secondary` `icon/static-white` `surface/brand` `text/disabled` `text/primary` `text/secondary` `text/static-white`
+**Colour tokens across all variants:** `focus/ring` `glass/selected` `glass/thumb` `surface/brand` `text/disabled` `text/primary` `text/secondary` `text/static-white`
 **Text styles:** `body-sm/Medium` · **Effects:** `elevation/thumb`
 
 ### Segmented Control/Neutral/md
@@ -60,7 +60,7 @@ Switch between 2–3 mutually exclusive views of the same content, in place.
 | Node ID | `23:107` (page `1:16`) |
 | Key | `ee87b0ca3cb90a4343e29feba3fbb895f43aef8a` |
 | Variants | 1 · default: `Segmented Control/Neutral/md` |
-| Default size | 197×38 |
+| Default size | 197×44 |
 
 | Property | Type | Values / default |
 |---|---|---|
@@ -71,7 +71,7 @@ Switch between 2–3 mutually exclusive views of the same content, in place.
 - Segment → `Segment` — pad space/0 space/16 space/0 space/16 · gap space/6 · radius radius/full · fill glass/thumb · effect elevation/thumb
 - Segment → `Segment` — pad space/0 space/16 space/0 space/16 · gap space/6 · radius radius/full
 
-**Colour tokens across all variants:** `glass/edge` `glass/thumb` `glass/track` `icon/primary` `icon/secondary` `text/primary` `text/secondary`
+**Colour tokens across all variants:** `glass/edge` `glass/thumb` `glass/track` `text/primary` `text/secondary`
 **Text styles:** `body-sm/Medium` · **Effects:** `elevation/thumb`
 <!-- AUTO:END -->
 

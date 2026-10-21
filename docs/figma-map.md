@@ -49,11 +49,15 @@ Styles: 99 text styles (incl. doc-only `mono/Regular`), 13 effect styles (`eleva
 | | Buttons | `1:12` |
 | | Checkbox | `1:13` |
 | | Dropdown | `1:14` |
+| | File Upload | `262:3` |
+| | Icon Tile | `259:2` |
+| | List Row | `261:2` |
 | | Option Card | `49:4` |
 | | OTP Input | `49:5` |
 | | Radio | `1:15` |
 | | Segmented Control | `1:16` |
 | | Step Indicator | `1:17` |
+| | Summary Card | `260:2` |
 | | Switch | `1:18` |
 | | System Components | `101:128916` |
 | | Tabs | `1:19` |

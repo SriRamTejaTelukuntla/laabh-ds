@@ -13,15 +13,15 @@ const BUDGET_MS = 20000;
 
 // Components a person taps (hit target checks). Instances nested in one of these count as part of it.
 const TAPPABLE = ['Button', 'Icon Button', 'Compact Button', 'Checkbox', 'Radio', 'Switch', 'Switch Row', 'Segment', 'Tab Item',
-  'Dropdown', 'Dropdown Item', 'TextField', 'TextField/Search', 'TextField/Amount', 'TextArea', 'Option Card', 'OTP Input'];
-const CONTAINER_TAPS = ['Option Card', 'Switch Row', 'Dropdown Item', 'Dropdown', 'TextField', 'TextField/Search', 'TextField/Amount', 'TextArea', 'OTP Input'];
+  'Dropdown', 'Dropdown Item', 'TextField', 'TextField/Search', 'TextField/Amount', 'TextArea', 'Option Card', 'OTP Input', 'File Upload'];
+const CONTAINER_TAPS = ['Option Card', 'Switch Row', 'Dropdown Item', 'Dropdown', 'TextField', 'TextField/Search', 'TextField/Amount', 'TextArea', 'OTP Input', 'File Upload'];
 // Controls whose border identifies them (non-text contrast, 3:1).
-const CONTROLS = ['TextField', 'TextField/Search', 'TextField/Amount', 'TextArea', 'Dropdown', 'OTP Cell', 'Checkbox', 'Radio', 'Switch'];
+const CONTROLS = ['TextField', 'TextField/Search', 'TextField/Amount', 'TextArea', 'Dropdown', 'OTP Cell', 'Checkbox', 'Radio', 'Switch', 'File Upload'];
 // DS component names: a plain frame with one of these names is a lookalike. Keep in step with docs/index.md.
 const DS_NAMES = ['Alert', 'App Header', 'Avatar', 'Badge', 'Bottom Sheet', 'Sheet Scrim', 'Button', 'Icon Button', 'Compact Button',
-  'Checkbox', 'Checkbox Group', 'Dropdown', 'Dropdown Item', 'Dropdown Menu', 'Icon', 'Option Card', 'OTP Input', 'OTP Cell', 'Radio', 'Radio Group',
+  'Checkbox', 'Checkbox Group', 'Dropdown', 'Dropdown Item', 'Dropdown Menu', 'File Upload', 'Icon', 'Icon Tile', 'List Row', 'Option Card', 'OTP Input', 'OTP Cell', 'Radio', 'Radio Group',
   'Screen Atmosphere', 'Segment', 'Segmented Control', 'Step', 'Step Indicator', 'Switch', 'Switch Row', 'Status Bar', 'Home Indicator',
-  'Tab Item', 'Tab Bar', 'TextArea', 'TextField', 'Timeline', 'Timeline Item', 'Tooltip', 'Top Bar'];
+  'Summary Card', 'Summary Row', 'Tab Item', 'Tab Bar', 'TextArea', 'TextField', 'Timeline', 'Timeline Item', 'Tooltip', 'Top Bar'];
 // Known exemptions (docs/components/*.md "Figma doc drift").
 const EXEMPT = [{ component: 'Status Bar', layer: 'Time', checks: ['text-style', 'raw-fill'], why: 'iOS system font by design (system-components.md)' }];
 const DS_COLOR_KEY = 'f10929d83247605f5e490e15a6d3ed57e1ce70ce'; // Color Tokens collection key (tokens/_meta.variables.json)
