@@ -18,7 +18,7 @@ The file's link also goes in the header of `prds/<feature>/plan.md`. `/prd-to-sc
 
 | Feature | File | fileKey | Plan |
 |---|---|---|---|
-| — | | | |
+| MF KYC | [Laabh — MF KYC](https://www.figma.com/design/kwRnjJU3KdW28Wi7gSU0mG) | `kwRnjJU3KdW28Wi7gSU0mG` | `prds/mf-kyc/plan.md` |
 
 ## Variable collections
 
